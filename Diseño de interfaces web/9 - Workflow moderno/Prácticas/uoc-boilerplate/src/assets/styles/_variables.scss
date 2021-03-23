@@ -1,0 +1,29 @@
+/* PALETA DE COLORES */
+$white-color-light: rgb(255, 255, 255);
+$white-color-dark: rgb(235, 235, 235);
+$black-color-light: rgb(182, 182, 182);
+$black-color-dark: rgb(16, 16, 16);
+$red-text-color: rgb(255, 194, 194);
+$red-bg-color: rgb(131, 12, 12);
+$blue-text-color: rgb(176, 201, 255);
+$blue-bg-color: rgb(30, 60, 126);
+$green-text-color: rgb(142, 250, 214);
+$green-bg-color: rgb(23, 143, 103);
+$yellow-text-color: rgb(255, 241, 177);
+$yellow-bg-color: rgb(139, 121, 39);
+
+/* COLORES FONDO Y TEXTO */
+$primary-bg-color: $white-color-light;
+$secondary-bg-color: $white-color-dark;
+$primary-text-color: $blue-text-color;
+
+/* LISTA DE COLORES DE FONDO ITEMS DEL MENÚ */
+$nav-items-bg-colors: $red-bg-color, $blue-bg-color, $green-bg-color, $yellow-bg-color;
+
+/* LISTA DE COLORES DE TEXTO ITEMS DEL MENÚ */
+$nav-items-text-colors: $red-text-color, $blue-text-color, $green-text-color, $yellow-text-color;
+
+/* PUNTOS DE RUPTURA PARA RESPONSIVE */
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;

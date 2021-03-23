@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar nombres de usuario - Jose Rosendo</title>
+</head>
+
+<body>
+    <h1>Validar nombres de usuario</h1>
+    <form>
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" onkeyup="mostrarSugerencias(this.value)">
+        <button onclick=" enviar();">Enviar</button>
+    </form>
+
+    <p>Sugerencias: <span id="sugerencias"></span></p>
+    <script src="./js/validarNombres.js"></script>
+</body>
+
+</html>

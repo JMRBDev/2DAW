@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>biblioteca - Examen Unidad 4 TypeScript - Jose Rosendo</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body class="p-4">
+    <h1>Biblioteca pública</h1>
+    <div class="container ml-0" id="formulario-container">
+        <form class="form" id="formulario" onsubmit="event.preventDefault(); modificar();">
+            <div class="form-group">
+                <label for="codigo">Código</label>
+                <input class="form-control" type="text" name="codigo" id="codigo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="titulo">Título</label>
+                <input class="form-control" type="text" name="titulo" id="titulo" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="autor">Autor</label>
+                <input class="form-control" type="text" name="autor" id="autor" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="abonado">Abonado</label>
+                <input class="form-control" type="text" name="abonado" id="abonado">
+            </div>
+
+            <div class="form-group form-check">
+                <input class="form-check-input" type="checkbox" name="prestamo" id="prestamo" disabled>
+                <label class="form-check-label text-dark" for="prestamo">Prestado</label>
+            </div>
+
+            <p class="d-none text-danger" id="error-msg">Error</p>
+            <button type="submit" class="btn btn-primary" id="prestar-devolver-btn">Prestar/Devolver</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <table class="table table-striped table-bordered text-dark mt-5">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Abonado</th>
+                    <th>Prestado</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-libros">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./js/biblio.js"></script>
+</body>
+
+</html>

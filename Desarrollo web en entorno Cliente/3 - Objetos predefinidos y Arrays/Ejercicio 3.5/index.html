@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De arrays a tablas - Jose Rosendo</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Mostrar un array en forma de tabla</h1>
+
+    <form onsubmit="return false">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre">
+
+        <label for="unidades">Unidades: </label>
+        <input type="text" name="unidades" id="unidades">
+
+        <label for="precio">Precio unitario: </label>
+        <input type="text" name="precio" id="precio">
+
+        <button onclick="anadirArticulo();">Enviar</button>
+    </form>
+    
+    <table id="tabla"></table>
+
+    <script src="./js/arrays.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Tienda online</h1>
+
+    <button class="btn btn-primary" onclick="iniciarSesion('usuario1', 'contraseña1'); console.log(carrito)">Iniciar
+        Sesión</button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Unidades</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Añadir al carrito</th>
+            </tr>
+        </thead>
+        <tbody id="articulos">
+        </tbody>
+    </table>
+
+    <div id="carrito">
+        <p>Carrito</p>
+        <table id="carrito-tabla"></table>
+    </div>
+
+    <script src="./js/tienda.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperación 1ª Evaluación</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Número de intentos -->
+    <p>Intento de envío del formulario: <span id="intentos-envio"></span></p>
+
+    <!-- Formulario -->
+    <form id="formulario" onsubmit="event.preventDefault(); enviarFormulario();">
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input class="form-control" onfocusout="this.value = this.value.toUpperCase();" type="text" name="nombre"
+                id="nombre" required>
+        </div>
+
+        <div class="form-group">
+            <label for="apellidos">Apellidos</label>
+            <input class="form-control" onfocusout="this.value = this.value.toUpperCase();" type="text" name="apellidos"
+                id="apellidos" required>
+        </div>
+
+        <div class="form-group">
+            <label for="edad">Edad</label>
+            <input class="form-control" type="number" name="edad" id="edad" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nif">NIF</label>
+            <input class="form-control" type="text" name="nif" id="nif" required>
+        </div>
+
+        <div class="form-group">
+            <input id="enviar-btn" class="btn btn-primary" type="submit" value="Enviar" required>
+        </div>
+    </form>
+
+    <!-- Botones de confirmación y cancelación de envío -->
+    <div class="d-none" id="confirmacion">
+        <button id="confirmarEnvio" class="btn btn-success">Confirmar envio</button>
+        <button id="cancelarEnvio" class="btn btn-danger">Cancelar envio</button>
+    </div>
+
+    <!-- Mensajes de error y/o información -->
+    <div id="mensajes">
+
+    </div>
+
+    <script src="./js/validacion.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+.dropdown-menu.login-dropdown, .dropdown-menu.cart-dropdown {
+    min-width: 25rem;
+    right: 0;
+    left: auto;
+}

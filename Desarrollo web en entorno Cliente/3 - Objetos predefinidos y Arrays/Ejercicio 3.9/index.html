@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenación de Números Aleatorios - Jose Rosendo</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <div id="loading-screen">
+        <div id="loading-popup">
+            <p id="cargando-txt">Cargando...</p>
+            <img src="./assets/loading.gif" alt="Cargando...">
+        </div>
+    </div>
+
+    <h1>Ordenación de Números Aleatorios</h1>
+
+    <div id="buttons">
+        <button id="btn-generar" class="btn" onclick="generarNumeros();">Generar</button>
+        <button id="btn-ordenar" class="btn" onclick="ordenarNumeros();" disabled>Ordenar</button>
+    </div>
+
+    <div id="radio-group">
+        <input type="radio" id="ascendente" class="radio-btn" name="orden" value="ascendente" checked>
+        <label for="ascendente">Ascendente</label>
+        <input type="radio" id="descendente" class="radio-btn" name="orden" value="descendente">
+        <label for="descendente">Descendente</label>
+    </div>
+
+    <div id="container">
+        <div class="item">0</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <script src="./js/ordenacion_aleatorios.js"></script>
+</body>
+
+</html>

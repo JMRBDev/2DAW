@@ -1,0 +1,22 @@
+{
+    "fichas": [
+        {
+            "titulo": "Ficha 1",
+            "responsable": "Marcos",
+            "descripcion": "Jefe de servicio",
+            "prioridad": "Baja"
+        },
+        {
+            "titulo": "Ficha 2",
+            "responsable": "Juan",
+            "descripcion": "Administrador",
+            "prioridad": "Media"
+        },
+        {
+            "titulo": "Ficha 3",
+            "responsable": "Jose",
+            "descripcion": "Presidente",
+            "prioridad": "Alta"
+        }
+    ]
+}

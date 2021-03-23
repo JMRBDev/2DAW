@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Últimos envíos - UOC</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img class="uoc-logo" src="./img/Logo_blau_uoc.png"
+                alt="Logotipo Universitat Oberta de Catalunya"></a>
+        <nav id="main-nav">
+            <ul id="main-nav-menu">
+                <li><a href="./index.html" class="main-nav-item">Inicio</a></li>
+                <li><a href="http://openaccess.uoc.edu/webapps/o2/?locale=es" class="main-nav-item">Buscar</a></li>
+                <li><a href="#" class="main-nav-item active">Publicar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1 class="large-title">O2: depositar un documento</h1>
+            <form action="" method="" class="form">
+                <fieldset class="form-group">
+                    <legend class="form-legend">Datos de la publicación</legend>
+                    <label for="comunidad">Comunidad <abbr title="Requerido">*</abbr></label>
+                    <select name="comunidad" id="comunidad-input" required>
+                        <option value="docencia">Docencia</option>
+                        <option value="institucional">Institucional</option>
+                        <option value="investigacion">Investigación</option>
+                        <option value="datos">Datos</option>
+                    </select>
+
+                    <label for="nombre">Nombre <abbr title="Requerido">*</abbr></label>
+                    <input type="text" name="nombre" id="nombre" required>
+
+                    <label for="primer-apellido">Primer apellido <abbr title="Requerido">*</abbr></label>
+                    <input type="text" name="primer-apellido" id="primer-apellido" required>
+
+                    <label for="segundo-apellido">Segundo apellido <abbr title="Requerido">*</abbr></label>
+                    <input type="text" name="segundo-apellido" id="segundo-apellido" required>
+
+                    <label for="titulo-documento">Título del documento <abbr title="Requerido">*</abbr></label>
+                    <input type="text" name="titulo-documento" id="titulo-documento" required>
+
+                    <label for="fecha-creacion">Fecha de creación <abbr title="Requerido">*</abbr></label>
+                    <input type="date" name="fecha-creacion" id="fecha-creacion" required>
+
+                    <fieldset class="form-radio-group">
+                        <legend>Editorial</legend>
+                        <div>
+                            <label for="editorial">Universidad Oberta de Cataluña</label>
+                            <input type="radio" name="editorial" id="editorial" value="uoc">
+                        </div>
+                    </fieldset>
+
+                    <label for="tipo-documento">Tipo de documento <abbr title="Requerido">*</abbr></label>
+                    <select name="tipo-documento" id="tipo-documento" required>
+                        <option value="articulo">Artículo</option>
+                        <option value="trabajo-fin-carrera">Trabajo de fin de carrera</option>
+                        <option value="trabajo-fin-master">Trabajo de fin de máster</option>
+                        <option value="tesis-doctoral">Tesis doctoral</option>
+                        <option value="libro">Libro</option>
+                        <option value="capitulo-parte-libro">Capítulo o parte de libro</option>
+                        <option value="revision">Revisión</option>
+                        <option value="conferencia">Conferencia</option>
+                        <option value="clase">Clase</option>
+                        <option value="informe-investigacion">Informe de investigación</option>
+                        <option value="informe-interno">Informe interno</option>
+                        <option value="hoja-informativa">Hoja informativa</option>
+                        <option value="documental">Documental</option>
+                    </select>
+
+                    <label for="idioma-documento">Idioma del documento <abbr title="Requerido">*</abbr></label>
+                    <select name="idioma-documento" id="idioma-documento" required>
+                        <option value="castellano">Castellano</option>
+                        <option value="catalan">Catalán</option>
+                        <option value="ingles">Inglés</option>
+                        <option value="aleman">Alemán</option>
+                        <option value="frances">Francés</option>
+                        <option value="italiano">Italiano</option>
+                        <option value="japones">Japonés</option>
+                        <option value="chino">Chino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+
+                    <label for="resumen">Resumen del documento <abbr title="Requerido">*</abbr></label>
+                    <textarea name="resumen" id="resumen" cols="30" rows="10" required></textarea>
+
+                    <label for="enviar-documento">Enviar archivo <abbr title="Requerido">*</abbr></label>
+                    <input type="file" name="enviar-documento" id="enviar-documento" required>
+                    
+                    <label for="aceptar-licencia">Acepta la licencia de publicación del documento <abbr title="Requerido">*</abbr></label>
+                    <select name="aceptar-licencia" id="aceptar-licencia" required>
+                        <option value="01">Reconocimiento-NoComercial-SinObraDerivada 3.0</option>
+                        <option value="02">Reconocimiento-NoComercial-CompartirIgual 3.0</option>
+                        <option value="03">Reconocimiento-SinObraDerivada 3.0</option>
+                        <option value="04">Reconocimiento-CompartirIgual 3.0</option>
+                        <option value="05">Reconocimiento 3.0</option>
+                    </select>
+                </fieldset>
+                
+                <fieldset class="form-group">
+                    <legend>Datos de contacto del remitente</legend>
+                    <label for="nombre-apellidos">Nombre y apellidos <abbr title="Requerido">*</abbr></label>
+                    <input type="text" name="nombre-apellidos" id="nombre-apellidos" required>
+
+                    <fieldset class="form-radio-group">
+                        <legend>Por favor, seleccione una de las dos opciones siguientes <abbr title="Requerido">*</abbr></legend>
+                        <div>
+                            <label for="hombre">Hombre</label>
+                            <input type="radio" name="genero" id="hombre" value="hombre">
+                        </div>
+                        <div>
+                            <label for="mujer">Mujer</label>
+                            <input type="radio" name="genero" id="mujer" value="mujer">
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-radio-group">
+                        <legend>Tipo de documento de identidad <abbr title="Requerido">*</abbr></legend>
+                        <div>
+                            <label for="nif">NIF</label>
+                            <input type="radio" name="documento" id="nif" value="nif">
+                        </div>
+                        <div>
+                            <label for="nie">NIE</label>
+                            <input type="radio" name="documento" id="nie" value="nie">
+                        </div>
+                        <div>
+                            <label for="pass">PASS</label>
+                            <input type="radio" name="documento" id="pass" value="pass">
+                        </div>
+                    </fieldset>
+                    
+                    <label for="n-documento">Número de documento <abbr title="Requerido">*</abbr></label>
+                    <input type="text" name="n-documento" id="n-documento" pattern="[0-9]{8}[A-Za-z]{1}" required>
+                    
+                    <label for="correo-electronico">Correo electrónico <abbr title="Requerido">*</abbr></label>
+                    <input type="email" name="correo-electronico" id="correo-electronico" required>
+                    
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" name="telefono" id="telefono">
+                    
+                    <fieldset class="form-radio-group">
+                        <legend>Idioma para la respuesta <abbr title="Requerido">*</abbr></legend>
+                        <div>
+                            <label for="castellano">Catellano</label>
+                            <input type="radio" name="idioma-respuesta" id="castellano" value="castellano">
+                        </div>
+                        <div>
+                            <label for="catalan">Catalán</label>
+                            <input type="radio" name="idioma-respuesta" id="catalan" value="catalan">
+                        </div>
+                    </fieldset>
+                    
+                    <div class="politica-privacidad checkbox">
+                        <input type="checkbox" name="politica-privacidad" id="politica-privacidad" required>
+                        <label for="politica-privacidad">He leído y acepto la política de privacidad y el aviso legal <abbr title="Requerido">*</abbr></label>
+                    </div>
+
+                    <div class="ser-informado checkbox">
+                        <input type="checkbox" name="ser-informado" id="ser-informado" required>
+                        <label for="ser-informado">Deseo ser informado sobre las nuevas incorporaciones al repositorio <abbr title="Requerido">*</abbr></label>
+                    </div>
+                    
+                    <input type="submit" value="Enviar" class="form-btn btn" required>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer id="page-footer">
+        <p>Actividad realizada por Jose Rosendo, para la asignatura Diseño de Interfaces Web</p>
+        <p>Primer trimestre del curso 2020-2021</p>
+    </footer>
+</body>
+
+</html>

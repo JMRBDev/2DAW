@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleados - Jose Rosendo</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <h2>Número total de empleados: <span id="numero-empleados">0</span></h2>
+
+    <table>
+        <thead>
+            <th>Número de empleado</th>
+            <th>DNI</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+        </thead>
+        <!-- En el tbody se muestran los datos de todos los empleados -->
+        <tbody id="tbody"></tbody>
+        <tfoot>
+            <tr>
+                <td><button onclick="anadirEmpleado();">Añadir un empleado nuevo</button></td>
+                <td><button onclick="eliminarEmpleado();">Eliminar un empleado</button></td>
+                <td><button onclick="modificarEmpleado();">Modificar un empleado</button></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="./js/empleados.js"></script>
+</body>
+
+</html>

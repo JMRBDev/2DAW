@@ -1,0 +1,56 @@
+{
+    "tenistas": [
+        {
+            "id": "1",
+            "nombre": "Tenista 1",
+            "apellidos": "Apellidos 1",
+            "edad": "10",
+            "pais": "España",
+            "premios": [
+                "Premio 1",
+                "Premio 2",
+                "Premio 3"
+            ],
+            "imagen": "1.jpg"
+        },
+        {
+            "id": "2",
+            "nombre": "Tenista 2",
+            "apellidos": "Apellidos 2",
+            "edad": "20",
+            "pais": "Suecia",
+            "premios": [
+                "Premio 4",
+                "Premio 5",
+                "Premio 6"
+            ],
+            "imagen": "2.jpg"
+        },
+        {
+            "id": "3",
+            "nombre": "Tenista 3",
+            "apellidos": "Apellidos 3",
+            "edad": "30",
+            "pais": "Francia",
+            "premios": [
+                "Premio 7",
+                "Premio 8",
+                "Premio 9"
+            ],
+            "imagen": "3.jpg"
+        },
+        {
+            "id": "4",
+            "nombre": "Tenista 4",
+            "apellidos": "Apellidos 4",
+            "edad": "40",
+            "pais": "Alemania",
+            "premios": [
+                "Premio 10",
+                "Premio 11",
+                "Premio 12"
+            ],
+            "imagen": "4.jpg"
+        }
+    ]
+}

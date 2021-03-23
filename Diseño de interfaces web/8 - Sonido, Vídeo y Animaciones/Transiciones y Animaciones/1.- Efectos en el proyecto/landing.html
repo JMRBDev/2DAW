@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio -- App Cursos</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/landing_styles.css">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!--Hoja de estilos de w3schools para el carousel slider-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body class="app">
+    <!--En el elemento main de los HTML se encuentran todos los elementos de la interfaz-->
+    <main class="app__content">
+
+        <!--Sección de contenido principal, donde se encuentra toda la información que va a resultar más útil para el usuario-->
+        <section class="content__main">
+            <nav class="main__navbar">
+                <picture>
+                    <source class="navbar__logo logo" media="(max-width: 320px)" srcset="./assets/img/logo200x200.png">
+                    <source class="navbar__logo logo" media="(min-width: 800px)" srcset="./assets/img/logo600x600.png">
+                    <img class="navbar__logo" src="./assets/img/logo400x400.png" alt="JMRBDev Logo">
+                </picture>
+                <ul class="navbar__menu">
+                    <li class="menu__item menu__item--active">Inicio</li>
+                    <li class="menu__item">Cursos</li>
+                    <li class="menu__item">Sobre nosotros</li>
+                    <li class="menu__item">Blog</li>
+                    <li class="menu__item">Contacto</li>
+                </ul>
+                <div class="navbar__cta">
+                    <button class="btn btn--white cta--sign-in">Iniciar sesión</button>
+                    <button class="btn cta--sign-up" onclick="toggleUIMode();">Crear cuenta</button>
+                </div>
+            </nav>
+            <section class="main__carousel">
+                <div class="carousel-container w3-display-container">
+                    <div class="carousel-container__slide w3-display-container mySlides">
+                        <picture class="slide__picture">
+                            <source class="slide__img" media="(max-width: 320px)"
+                                srcset="./assets/img/courses/course01-960x450.jpg">
+                            <source class="slide__img" media="(min-width: 800px)"
+                                srcset="./assets/img/courses/course01-1920x900.jpg">
+                            <img class="slide__img" src="./assets/img/courses/course01-1440x675.jpg" alt="JMRBDev Logo">
+                        </picture>
+                        <div class="slide__text w3-display-bottomleft">
+                            JavaScript
+                        </div>
+                    </div>
+
+                    <div class="carousel-container__slide w3-display-container mySlides">
+                        <picture class="slide__picture">
+                            <source class="slide__img" media="(max-width: 320px)"
+                                srcset="./assets/img/courses/course02-960x450.jpg">
+                            <source class="slide__img" media="(min-width: 800px)"
+                                srcset="./assets/img/courses/course02-1920x900.jpg">
+                            <img class="slide__img" src="./assets/img/courses/course02-1440x675.jpg" alt="JMRBDev Logo">
+                        </picture>
+                        <div class="slide__text w3-display-bottomleft">
+                            HTML5
+                        </div>
+                    </div>
+
+                    <div class="carousel-container__slide w3-display-container mySlides">
+                        <picture class="slide__picture">
+                            <source class="slide__img" media="(max-width: 320px)"
+                                srcset="./assets/img/courses/course03-960x450.jpg">
+                            <source class="slide__img" media="(min-width: 800px)"
+                                srcset="./assets/img/courses/course03-1920x900.jpg">
+                            <img class="slide__img" src="./assets/img/courses/course03-1440x675.jpg" alt="JMRBDev Logo">
+                        </picture>
+                        <div class="slide__text w3-display-bottomleft">
+                            Python
+                        </div>
+                    </div>
+
+                    <div class="carousel-container__slide w3-display-container mySlides">
+                        <img class="slide__img" src="./assets/img/courses/course04.jpg" style="width:100%">
+                        <div class="slide__text w3-display-bottomleft">
+                            Java
+                        </div>
+                    </div>
+
+                    <div class="carousel-container__slide w3-display-container mySlides">
+                        <img class="slide__img" src="./assets/img/courses/course05.jpg" style="width:100%">
+                        <div class="slide__text w3-display-bottomleft">
+                            Photoshop
+                        </div>
+                    </div>
+
+                    <div class="carousel-container__slide w3-display-container mySlides">
+                        <img class="slide__img" src="./assets/img/courses/course06.jpg" style="width:100%">
+                        <div class="slide__text w3-display-bottomleft">
+                            Illustrator
+                        </div>
+                    </div>
+
+                    <div class="carousel-container__slide w3-display-container mySlides">
+                        <img class="slide__img" src="./assets/img/courses/course07.jpg" style="width:100%">
+                        <div class="slide__text w3-display-bottomleft">
+                            Youtube
+                        </div>
+                    </div>
+
+                    <div class="carousel-container__slide w3-display-container mySlides">
+                        <img class="slide__img" src="./assets/img/courses/course08.jpg" style="width:100%">
+                        <div class="slide__text w3-display-bottomleft">
+                            Windows 10
+                        </div>
+                    </div>
+
+                    <button class="btn btn--carousel btn--pink w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="btn btn--carousel btn--pink w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                </div>
+            </section>
+            <section class="content__info content__info--light">
+                <h2 class="info__heading">Aprende y comparte tus conocimientos</h2>
+                <p class="info__text">Desde cualquier parte del mundo, en cualquier momento y gracias a tu teléfono
+                    móvil.</p>
+                <!-- He usado la etiqueta video con las etiquetas source para tener más compatibilidad con distintos navegadores. De esta forma, en cuanto la web se cargue en un navegador que no soporta uno de los formatos de vídeo, se reproducirá otro.
+                Para hacer la conversión de formatos he usado la web online-convert.com, he elegido los formatos mp4 (por ser el más extendido en el mundo, no hay dispositivo no compatible con mp4), webm (por ser el estándar de HTML y open-source) y ogv (por ser un formato open-source y con una compatibilidad muy extendida excepto en IE y Safari) -->
+                <video class="info__video" width="1280" height="720" loop muted controls>
+                    <source src="./assets/video/video01.mp4" type="video/mp4" />
+                    <source src="./assets/video/video01.ogv" type="video/ogg" />
+                    <source src="./assets/video/video01.webm" type="video/webm" />
+                    <img src="./assets/img/video-no-soportado.png" alt="Video no soportado" />
+                    Su navegador no soporta vídeo.
+                </video>
+            </section>
+            <section class="content__info content__info--columns content__info--dark">
+                <div class="info__audio">
+                    <!-- He usado la etiqueta audio con las etiquetas source para tener más compatibilidad con distintos navegadores. De esta forma, en cuanto la web se cargue en un navegador que no soporta uno de los formatos de audio, se reproducirá otro.
+                    Para hacer la conversión de formatos he usado la web online-convert.com, he elegido los formatos mp3 (por ser el más extendido en el mundo, no hay dispositivo no compatible con mp3), wav (por ser el formato predeterminado de Windows, tiene una compatibilidad muy amplia) y ogg (por ser un formato open-source y con una compatibilidad muy extendida excepto en IE y Safari) -->
+                    <audio loop muted controls>
+                        <source src="./assets/audio/audio01.mp3" type="audio/mp3" />
+                        <source src="./assets/audio/audio01.wav" type="audio/wav" />
+                        <source src="./assets/audio/audio01.ogg" type="audio/ogg" />
+                        Su navegador no soporta audio.
+                    </audio>
+                </div>
+                <div>
+                    <h2 class="info__heading">También aprenderás a hacer música</h2>
+                    <p class="info__text">Electrónica, hip-hop, pop... ¡Cualquier estilo!</p>
+                    <button class="btn">Ver todos los cursos</button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!--Footer general de la página, solo es visible en escritorio y dispositivos grandes-->
+    <footer class="footer">
+        <div class="footer__legalese">
+            <a href="#" class="legalese__link">Política de Privacidad y Cookies</a>
+            <a href="#" class="legalese__link">Términos de uso</a>
+        </div>
+        <p>Copyright © 20XX Nombre de la app</p>
+        <picture>
+            <source class="footer__logo logo" media="(max-width: 320px)" srcset="./assets/img/logo200x200.png">
+            <source class="footer__logo logo" media="(min-width: 800px)" srcset="./assets/img/logo600x600.png">
+            <img class="footer__logo logo" src="./assets/img/logo400x400.png" alt="JMRBDev Logo">
+        </picture>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/theme.js"></script>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Despositar un documento · PEC2 HTML y CSS</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body class="publicar">
+	<header>
+		<div>
+			<a href="index.html"><img src="img/logo.png" alt="logotipo UOC"></a>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html" >Inicio</a></li>
+				<li><a href="http://openaccess.uoc.edu/webapps/o2/?locale=es" target="_blank">Buscar</a></li>
+				<li><a href="publicar.html" class="actual">Publicar</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="clear"></div>
+	<section class="publicarFormulario">
+		<h1>O2: despositar un documento</h1>
+		<p>Los campos marcados con * son obligatorios</p>
+		<form>
+			<h2>Datos de la publicación</h2>
+			
+			<label>Comunidad donde debe publicarse *</label>
+			 <select>
+			 	<option value="docencia">Docencia</option>
+			 	<option value="institucional">Institucional</option>
+			 	<option value="investigacion">Investigación</option>
+			 	<option value="datos">Datos</option>
+			 </select> 
+
+			 <label for="nombre-del-autor">Nombre del autor *</label>
+			 <input type="text" name="nombre-del-autor" id="nombre-del-autor" placeholder="Escribe el nombre del autor" required pattern="[A-Za-z]+" minlength="2" maxlength="64">
+
+			 <label for="primer-apellido-autor">Primer apellido del autor *</label>
+			 <input type="text" name="primer-apellido-autor" id="primer-apellido-autor" placeholder="Escribe el primer apellido del autor" required pattern="[A-Za-z]+" minlength="2" maxlength="64">
+
+			 <label for="segundo-apellido-autor">Segundo apellido del autor *</label>
+			 <input type="text" name="segundo-apellido-autor" id="segundo-apellido-autor" placeholder="Escribe el segundo apellido del autor" required pattern="[A-Za-z]+" minlength="2" maxlength="64">
+
+			 <label for="titulo-documento">Título del documento *</label>
+			 <input type="text" name="titulo-documento" id="titulo-documento" placeholder="Escribe el título del documento" pattern="[A-Za-z]+" minlength="2" maxlength="64">
+
+			 <label for="fecha-creacion-documento">Fecha de creación del documento *</label>
+			 <input type="date" name="fecha-creacion-documento" id="fecha-creacion-documento" required>
+
+			 
+			 <div class="radio">
+			 	<p>Editorial</p>
+			 	<input type="radio" name="editorial" id="editorial" value="uoc" checked>
+			 	<label for="editorial">Universidad Oberta de Cataluña</label>
+			 </div>
+
+			 <label for="tipo-documento">Tipo de documento *</label>
+			 <select id="tipo-documento">
+			 	<option value="">Selecciona un tipo</option>
+			 	<option value="articulo">Artículo</option>
+			 	<option value="tfg">Trabajo fin de carrera</option>
+			 	<option value="tfm">Trabajo fin de máster</option>
+			 	<option value="tesis-doctoral">Tesis doctoral</option>
+			 	<option value="libro">Libro</option>
+			 	<option value="capitulo-o-parte-de-libro">Capítulo o parte de libro</option>
+			 	<option value="revision">Revisión</option>
+			 	<option value="Conferencia">Conferencia</option>
+			 	<option value="clase">Clase</option>
+			 	<option value="informe-investigacion">Informe investigación</option>
+			 	<option value="informe-interno">Informe interno</option>
+			 	<option value="hoja-informativa">Hoja informativa</option>
+			 	<option value="documental">Documental</option>
+			 </select> 
+
+			 <label for="idioma-documento">Idioma del documento *</label>
+			 <select id="idioma-documento">
+			 	<option value="">Selecciona un tipo</option>
+			 	<option value="castellano">Castellano</option>
+			 	<option value="catalan">Catalán</option>
+			 	<option value="ingles">Inglés</option>
+			 	<option value="aleman">Alemán</option>
+			 	<option value="france">Frances</option>
+			 	<option value="italiano">Italiano</option>
+			 	<option value="japones">Japonés</option>
+			 	<option value="chino">Chino</option>
+			 	<option value="otro">otro</option>			 	
+			 </select>
+
+			 <label for="resumen">Breve resumen del documento *</label> 
+			 <textarea name="resumen" id="resumen" cols="25" rows="3"></textarea>
+
+			 <label for="enviar-documento">Enviar documento *</label>
+			 <input type="file" name="enviar-documento" id="enviar-documento">
+
+			 <label for="licencia">Acepta la licencia de publicación del documento *</label>
+			 <select id="licencia">
+			 	<option value="">Selecciona un tipo</option>
+			 	<option value="Reconocimiento-NoComercial-SinObraDerivada">Reconocimiento NoComercial-SinObraDerivada 3.0</option>
+				<option value="reconocimiento-nocomercial-compartirigual">Reconocimiento -NoComercial-CompartirIgual 3.0</option>
+				<option value="reconocimiento-sinobraderivada">Reconocimiento -SinObraDerivada 3.0 </option> 
+				<option value="reconocimiento-compartirigual">Reconocimiento -CompartirIgual 3.0</option>
+				<option value="reconocimiento">Reconocimiento 3.0</option>
+			 </select> 
+			
+			<h2>Datos de contacto del remitente</h2>
+			 <label for="nombre-completo">Nombre y apellidos *</label>
+			 <input type="text" name="nombre-completo" id="nombre-completo" placeholder="Escribe el nombre completo">
+
+			 <div class="radio">
+				 <p>Por favor selecciones una de las dos opciones siguientes: </p>
+				 <div>
+				 	<input type="radio" name="genero" id="hombre" value="hombre" >
+				 	<label for="hombre">Hombre</label>
+				 </div>
+				 <div>
+				 	<input type="radio" name="genero" id="mujer" value="mujer" >
+				 	<label for="mujer">Mujer</label>
+				 </div>
+			 </div>
+			 <div class="radio">
+				 <p>Tipo de documento de indentidad </p>
+				 <div>
+				 	<input type="radio" name="documento" id="nif" value="nif" >
+				 	<label for="nif">NIF</label>
+				 </div>
+				 <div>
+				 	<input type="radio" name="documento" id="nie" value="nie" >
+				 	<label for="nie">NIE</label>
+				 </div>
+				 <div>
+				 	<input type="radio" name="documento" id="pass" value="pass" >
+				 	<label for="pass">PASS</label>
+				 </div>
+			 </div>
+
+			 <label for="numero-documento">Número de documento *</label>
+			 <input type="text" name="numero-documento" id="numero-documento" placeholder="Escribe el número de documento elegido" required pattern="[A-Za-z]+" minlength="2" maxlength="128">
+
+			 <label for="email">Correo electrónico *</label>
+			 <input type="email" name="email" id="email" placeholder="Escribe el correo electrónico" required>
+
+			 <label for="telefono">Teléfono (opcional)</label>
+			 <input type="tel" name="telefono" id="telefono" placeholder="Escribe el teléfono" pattern="[0-9]+" minlength="9" maxlength="10">
+			 
+			 <div class="radio">
+				 <p>Idioma para la respuesta *</p>
+				 <div>
+				 	<input type="radio" name="idioma-respuesta" id="castellano" value="castellano" >
+				 	<label for="castellano">Castellano</label>
+				 </div>
+				 <div>
+				 	<input type="radio" name="idioma-respuesta" id="catalan" value="calatan" >
+				 	<label for="catalan">Catalán</label>
+				 </div>
+			 </div>
+			 <hr>
+
+			 <div>
+			  <input type="checkbox" name="politica-de-privacidad" id="politica-de-privacidad" required>
+			  <label for="politica-de-privacidad">He leído y acepto la política de privacidad y el aviso legal *</label>
+			 </div>
+			 
+			 <div>
+			  <input type="checkbox" name="ser-informado" id="ser-informado">
+			  <label for="ser-informado">Dese ser informado sobre las nuevas incorporaciones al repositorio</label>
+			 </div>
+			 
+			 <input type="submit" name="enviar" class="boton">
+		</form>
+
+	</section>
+	<div class="clear"></div>
+	<footer>
+			<p>Trabajo realizado por Alejandro Carmona Martos, para la asignatura HTML y CSS</p>
+			<p>Primer semestre del curso 2018-2019</p>		
+	</footer>
+
+</body>
+</html>

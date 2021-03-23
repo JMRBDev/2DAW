@@ -1,0 +1,20 @@
+{
+    "deseos": [
+        {
+            "id": 1,
+            "nombre": "Macbook Pro M1 13'"
+        },
+        {
+            "id": 2,
+            "nombre": "iPad Air 2020"
+        },
+        {
+            "id": 3,
+            "nombre": "Samsung Galaxy S21 Ultra"
+        },
+        {
+            "id": 4,
+            "nombre": "MSI P65 Creator"
+        }
+    ]
+}

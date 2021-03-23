@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Examen JavaScript - Jose Rosendo</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <form id="formulario" onsubmit="event.preventDefault(); enviar();">
+        <label for="nombre">Nombre</label>
+        <input class="input" type="text" name="nombre" id="nombre" required pattern="^[a-zA-Z\s]+$" minlength="2" maxlength="100">
+
+        <label for="direccion">Direccion</label>
+        <input type="text" name="direccion" id="direccion">
+
+        <label for="apellidos">Apellidos</label>
+        <input class="input" type="text" name="apellidos" id="apellidos" required pattern="^[a-zA-Z\s]+$" minlength="2"
+            maxlength="200">
+
+        <label for="edad">Edad</label>
+        <input class="input" type="number" name="edad" id="edad" min="1" max="130" required>
+
+        <label for="profesion">Profesión</label>
+        <input class="input" type="text" name="profesion" id="profesion" required pattern="^[a-zA-Z\s]+$">
+
+        <input type="submit" value="Añadir">
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Edad</th>
+                <th>Profesión</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-body">
+        </tbody>
+    </table>
+
+    <script src="./js/formulario_a_tabla.js"></script>
+</body>
+
+</html>

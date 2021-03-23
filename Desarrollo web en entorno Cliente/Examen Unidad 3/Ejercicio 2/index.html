@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Examen JavaScript - Jose Rosendo</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <form id="formulario" onsubmit="event.preventDefault(); crearParrafo();">
+        <label for="texto">Texto</label>
+        <textarea class="text-area" name="texto" id="texto" placeholder="Escriba un texto aquí..." rows="5"></textarea>
+
+        <input type="submit" value="Crear párrafo">
+    </form>
+
+    <div id="resultado"></div>
+
+    <script src="./js/crear_parrafo.js"></script>
+</body>
+
+</html>

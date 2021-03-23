@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Campos - Jose Rosendo</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1>Validación de Campos</h1>
+
+    <form id="formulario">
+        <label for="nombre-usuario" class="label">Nombre de usuario <abbr title="Required" class="required-asterisk">*</abbr></label>
+        <input type="text" name="nombre-usuario" id="nombre-usuario" maxlength="10" required>
+
+        <label for="edad" class="label">Edad <abbr title="Required" class="required-asterisk">*</abbr></label>
+        <input type="number" name="edad" id="edad" min="1" max="125" required>
+
+        <label for="password" class="label">Password <abbr title="Required" class="required-asterisk">*</abbr></label>
+        <input type="password" name="password" maxlength="8" id="password" pattern="^[A-Za-z.\s_-]+$" required>
+
+        <label for="repetir-password" class="label">Repetir Password <abbr title="Required" class="required-asterisk">*</abbr></label>
+        <input type="password" name="repetir-password" maxlength="8" id="repetir-password" pattern="^[A-Za-z.\s_-]+$" required>
+
+        <div id="radio-group">
+            <div class="radio">
+                <label for="menor-edad" class="label" id="radio-label">Soy menor de edad</label>
+                <input type="radio" name="menor-mayor-edad" id="menor-edad" checked>
+            </div>
+            <div class="radio">
+                <label for="mayor-edad" class="label" id="radio-label">Soy mayor de edad</label>
+                <input type="radio" name="menor-mayor-edad" id="mayor-edad">
+            </div>
+        </div>
+
+        <input type="submit" value="Enviar" class="btn">
+    </form>
+
+    <div id="error"></div>
+
+    <script src="./js/validacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#formulario {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+}

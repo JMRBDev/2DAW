@@ -1,0 +1,118 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: #262626;
+}
+
+.contenedor {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: #262626;
+    color: white;
+    transform: translateY(-100%);
+    transition-delay: 7s;
+    transition-duration: 1s;
+    transition-property: transform;
+}
+
+@keyframes cambiarColor {
+    0% {
+        background-color: #da2828;
+    }
+    25% {
+        background-color: #4281e0;
+    }
+    50% {
+        background-color: #94ee7d;
+    }
+    75% {
+        background-color: #e0ce64;
+    }
+    100% {
+        background-color: #f12c6e;
+    }
+}
+
+@keyframes moverBarra {
+    0% {
+        width: 0;
+        left: 0;
+        right: 15rem;
+    }
+    25% {
+        width: 15rem;
+        left: 0;
+        right: 0;
+    }
+    50% {
+        width: 0;
+        left: 15rem;
+        right: 0;
+    }
+    75% {
+        width: 15rem;
+        left: 0;
+        right: 0;
+    }
+    100% {
+        width: 0;
+        left: 0;
+        right: 15rem;
+    }
+}
+
+.loading {
+    width: 15rem;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.bar {
+    height: 0.2rem;
+    position: absolute;
+    background-color: red;
+    animation: cambiarColor 5s ease infinite, moverBarra 5s ease infinite;
+}
+
+.background {
+    height: 100vh;
+    position: relative;
+    background: url(img/bg.jpg);
+    background-position: bottom left;
+    animation: driving 10s linear 1;
+    animation-delay: 6s;
+    transform: translateY(-100%);
+    transition-delay: 7s;
+    transition-duration: 1s;
+    transition-property: transform;
+}
+
+.car {
+    position: absolute;
+    left: 300px;
+    bottom: -50px;
+    width: 200px;
+}
+
+.motorbike {
+    position: absolute;
+    left: 700px;
+    bottom: 55px;
+    width: 150px;
+}
+
+@keyframes driving {
+    from {
+        background-position: bottom left;
+    }
+    to {
+        background-position: bottom right;
+    }
+}

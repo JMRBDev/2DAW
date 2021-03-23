@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2.1 - Jose Rosendo</title>
+</head>
+<body>
+    <h2>Años bisiestos:</h2>
+    <label for="ano">Año: </label>
+    <input type="number" id="ano" name="ano" value="2020">
+    <button onclick="esBisiestoAnidado()">Enviar</button>
+
+    <h3 id="resultado1"></h3>
+
+    <br><br>
+
+    <h2>Operador '?' anidado:</h2>
+    <h3>Elige los ingredientes que quieras</h3>
+    <label for="tomate">Tomate</label>
+    <input type="radio" name="ingrediente" id="tomate"><br>
+    <label for="queso">Queso</label>
+    <input type="radio" name="ingrediente" id="queso"><br>
+    <label for="jamon">Jamón</label>
+    <input type="radio" name="ingrediente" id="jamon"><br>
+    <button onclick="comprobarOperadorTernario()">Enviar</button>
+
+    <h3 id="resultado2"></h3>
+
+    <br><br>
+
+    <h3 id="resultado3"></h3>
+
+    <script src="js/bisiesto.js"></script>
+    <script src="js/operador_anidado.js"></script>
+    <script src="js/clase_persona.js"></script>
+</body>
+</html>

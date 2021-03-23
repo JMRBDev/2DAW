@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujar un rombo - Jose Rosendo</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <h1>Dibujar un rombo</h1>
+
+    <form onsubmit="return false" id="formulario">
+        <label for="filas">Altura del rombo: </label>
+        <input type="number" name="filas" id="filas" value="10" required><br>
+        <label for="caracter">Caracter a dibujar: </label>
+        <input type="text" name="caracter" id="caracter" value="*" maxlength="1" required><br>
+        <label for="posicion">Posición horizontal: </label>
+        <input type="number" name="posicion-h" id="posicion-h" value="5" min="0"><br>
+        <label for="posicion">Posición vertical: </label>
+        <input type="number" name="posicion-v" id="posicion-v" value="5" min="0"><br>
+        <label for="relleno">Rellenar rombo</label>
+        <input type="checkbox" name="relleno" id="relleno">
+        <button onclick="dibujarRombo()">Dibujar</button>
+    </form>
+    
+    <div id="container"></div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

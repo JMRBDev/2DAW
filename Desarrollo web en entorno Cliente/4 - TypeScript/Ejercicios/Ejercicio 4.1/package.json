@@ -1,0 +1,11 @@
+{
+  "name": "ejercicio-4.1",
+  "version": "1.0.0",
+  "description": "Ejercicio 4.1 de TypeScript - Jose Rosendo 2º DAW B",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --watch"
+  },
+  "author": "Jose Rosendo",
+  "license": "ISC"
+}

@@ -1,0 +1,867 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@400;700;900&display=swap');
+/* Variables para el tema oscuro */
+
+[data-theme="dark"] {
+    --white-color: #FFFFFF;
+    --black-color: #2C2C2C;
+    --dark-purple-color: #17142F;
+    --light-purple-color: #595484;
+    --pink-color: #FF004E;
+    --blue-color: #16C9FF;
+    --yellow-color: #FED813;
+    --grey-color: #9B9B9B;
+    --main-bg-color: var(--dark-purple-color);
+    --secondary-bg-color: var(--light-purple-color);
+    --active-color: var(--white-color);
+    --main-font-color: var(--white-color);
+    --secondary-font-color: var(--black-color);
+}
+
+/* Variables para el tema claro */
+
+[data-theme="light"] {
+    --white-color: #FFFFFF;
+    --black-color: #2C2C2C;
+    --dark-purple-color: #17142F;
+    --light-purple-color: #595484;
+    --pink-color: #FF004E;
+    --blue-color: #16C9FF;
+    --yellow-color: #FED813;
+    --grey-color: #9B9B9B;
+    --main-bg-color: var(--white-color);
+    --secondary-bg-color: #EDF0FA;
+    --active-color: var(--black-color);
+    --main-font-color: var(--black-color);
+    --secondary-font-color: var(--white-color);
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    color: var(--main-font-color);
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Ocultar por defecto todos los elementos que contengan la clase only-mobile */
+
+.only-mobile {
+    display: none;
+}
+
+/* Vía por la que se mueve la barra de scroll */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0.15rem rgba(0, 0, 0, 1);
+    border-radius: 1rem;
+    background-color: var(--secondary-bg-color);
+    margin: 2rem;
+}
+
+/* Contenedor de la barra de scroll */
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+/* Barra de scroll */
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: var(--pink-color);
+}
+
+.app {
+    background-color: var(--main-bg-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* La barra de scroll principal, la de la web en sí, es distinta a la de los carruseles */
+
+.app::-webkit-scrollbar-track {
+    margin: 0;
+    background-color: var(--main-bg-color);
+}
+
+.app::-webkit-scrollbar-thumb {
+    background-color: var(--pink-color);
+}
+
+/* Imagen de fondo de las pantallas de Iniciar sesión y Crear cuenta */
+
+.app--login, .app--signup {
+    background-image: url(/assets/img/auth-top.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-height: 100vh;
+}
+
+/* Botones normales con fondo rosa y letras blancas */
+
+.btn {
+    border: none;
+    background-color: var(--pink-color);
+    color: var(--white-color);
+    padding: 0.6rem 1rem;
+    border-radius: 0.3rem;
+    justify-content: center;
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Variación de los botones con los colores invertidos */
+
+.btn--white {
+    background-color: var(--white-color);
+    color: var(--pink-color);
+}
+
+.form__input {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+}
+
+.input__label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.input__textbox {
+    background-color: var(--secondary-bg-color);
+    border: none;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    margin-top: 0.3rem;
+}
+
+.input__textbox::placeholder {
+    color: var(--main-font-color);
+}
+
+/* Grupo de inputs para la fecha de nacimiento (Crear cuenta) */
+
+.input__date-group {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.input__textbox--date {
+    width: 25%;
+}
+
+.input__textbox--date::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+/* Sección en la que se muestra la información sobre Iniciar sesión y Crear cuenta */
+
+.app__auth {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 20vw;
+    position: relative;
+}
+
+/* Cuadro en el que se encuentra el formulario de Iniciar sesión */
+
+.auth__login {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    min-width: 25vw;
+    min-height: 40vh;
+    box-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.6);
+    border-radius: 0.6rem;
+    background-color: var(--main-bg-color);
+}
+
+.auth__heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    align-self: center;
+    margin-bottom: 2rem;
+}
+
+.auth__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.textbox__forgot-password {
+    color: var(--pink-color);
+    font-size: 0.7rem;
+}
+
+.auth__change-option {
+    font-weight: 100;
+    font-size: 0.7rem;
+    align-self: center;
+}
+
+.change-option__option {
+    font-weight: 600;
+}
+
+/* Ilustración de las pantallas de Auth, que tiene que estar pegada al footer */
+
+.auth__illustration {
+    bottom: -0.2rem;
+    position: absolute;
+    width: 40vw;
+    right: 20vw;
+    z-index: -1;
+}
+
+/* Home */
+
+.app__content {
+    display: flex;
+}
+
+/* Los menús de las páginas de contenidos deben estar siempre pegados a los laterales y ser del alto total del viewport, excepto cuando se hace scroll hasta el footer, en cuyo caso los menús deben seguir el flujo del scroll junto con el footer y subir o bajar con él */
+
+.content__menu {
+    height: 100vh;
+    background-color: var(--secondary-bg-color);
+    position: sticky;
+    top: 0;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Menús expandidos */
+
+.content__menu--expanded {
+    width: 13rem;
+    transition: all 100ms;
+}
+
+/* Menús contraídos */
+
+.content__menu--contracted {
+    width: 7rem;
+    transition: all 100ms;
+}
+
+/* Ocultar o modificar todos los elementos de los menús cuando estén contraídos */
+
+/* ********** */
+
+.content__menu--contracted .menu__user-display-name {
+    font-size: 0.8rem;
+    max-width: 5.5rem;
+    margin-top: 1.5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: all 100ms;
+}
+
+.content__menu--contracted .nav__nav-item .nav-item__title {
+    display: none;
+}
+
+.content__menu--contracted .nav-item__icon {
+    margin: 0;
+}
+
+.content__menu--contracted .menu__personal-details {
+    display: none;
+}
+
+.content__menu--contracted .menu__toggle .nav-item__title {
+    display: none;
+}
+
+/* ********** */
+
+.content__menu--left {
+    border-radius: 0 1rem 1rem 0;
+}
+
+.content__menu--right {
+    border-radius: 1rem 0 0 1rem;
+}
+
+.menu__logo {
+    max-width: 50%;
+}
+
+.menu__nav, .menu__personal-details {
+    list-style-type: none;
+    margin-top: 1.3rem;
+}
+
+.nav__nav-item {
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.menu__toggle {
+    cursor: pointer;
+}
+
+/* Cambiar el color del item del menú de navegación activo para que se distinga */
+
+.nav__nav-item--active .nav-item__icon, .menu__toggle .nav-item__icon {
+    background-color: var(--active-color);
+}
+
+.nav-item__icon {
+    color: var(--pink-color);
+    background-color: var(--main-bg-color);
+    padding: 0.6rem 0.5rem;
+    margin-right: 0.6rem;
+    border-radius: 0.7rem;
+    box-sizing: unset;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Mover los iconos del menú de navegación y los iconoos de contraer los menús cuando se pasa el cursor por encima para que tengan un efecto animado */
+
+.nav__nav-item:hover .nav-item__icon, .menu__toggle:hover .nav-item__icon {
+    transform: translateY(-0.12rem);
+    transition-property: transform;
+    transition-duration: 100ms;
+}
+
+.nav-item__title {
+    font-weight: 600;
+}
+
+.menu__personal-details {
+    overflow: auto;
+}
+
+/* Ocultar la barra de scroll en el menú derecho, para que se pueda hacer scroll pero no se vea la barra */
+
+.menu__personal-details::-webkit-scrollbar {
+    display: none;
+}
+
+/* Avatar de usuario que tiene un borde de color alrededor, al estilo de los avatares de Twitch */
+
+.menu__avatar {
+    max-width: 80%;
+    border: 0.3rem solid var(--pink-color);
+    border-radius: 100%;
+    padding: 0.1rem;
+}
+
+.menu__user-display-name {
+    text-align: center;
+    margin-top: 0.7rem;
+}
+
+.personal-details__item {
+    margin: 0 1rem 1rem 1rem;
+}
+
+.personal-details__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.2rem;
+}
+
+.details-item__title {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.details-item__see-more {
+    color: rgb(155, 155, 155);
+    font-size: 0.7rem;
+}
+
+.details-item__box {
+    background-color: var(--main-bg-color);
+    height: 10rem;
+    border-radius: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+/* Botón de contraer y expandir los menús */
+
+.menu__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    padding: 1.2rem 0;
+    background-color: var(--main-bg-color);
+    width: 100%;
+    border: 0.2rem solid var(--secondary-bg-color);
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+/* El contenido en medio de los menús, que debe ocupar lo máximo que pueda (flex: 1) */
+
+.content__main {
+    flex: 1;
+    background-color: var(--main-bg-color);
+    padding: 2rem;
+}
+
+.main__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading__title {
+    font-size: 3rem;
+}
+
+.main__searchbar {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-bg-color);
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.8rem;
+    align-items: center;
+    height: 50%;
+}
+
+.searchbar__input {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0.2rem;
+}
+
+.searchbar__icon {
+    margin-right: 0.1rem;
+}
+
+/* Los márgenes negativos en los carruseles son para que las tarjetas, al hacer scroll, toquen el borde de los menús laterales y no se corten en el vacío */
+
+.body__carousel {
+    list-style-type: none;
+    display: flex;
+    overflow-x: auto;
+    margin: 0 -2rem 1.5rem -2rem;
+    padding: 0 2rem 0.5rem 2rem;
+}
+
+.body__promos-carousel {
+    margin-top: 2rem;
+}
+
+/* Margen a la izquiera para todas las tarjetas de los carruseles, excepto la primera, si no quedaría descentrado */
+
+.carousel__card:not(:first-child) {
+    margin-left: 1rem;
+}
+
+/* Posición relativa a la última tarjeta de cada carrusel para poder añadir detrás un espacio y que quede centrado al hacer scroll */
+
+.carousel__card:last-child {
+    position: relative;
+}
+
+/* Este es el espacio que añado detrás de la última tarjeta de cada carrusel, para que quede centrado y con el mismo margen que la primera */
+
+.carousel__card:last-child::after {
+    /* Esto solo sirve para que al final de cada carrusel haya un hueco, no se puede hacer con margin ni padding porque es un contenedor flex con scroll */
+    position: absolute;
+    content: '';
+    right: -2rem;
+    width: 0.1%;
+    height: 0.1%;
+}
+
+/* Flex grow, Flex shrink y Flex basis, o lo que es lo mismo, factor de crecimiento (todas las tarjetas igual de anchas), factor de contracción (ninguna tarjeta se contrae para dejar hueco a otra) y tamaño inicial (cómo se calcula el tamaño de cada tarjeta, en este caso es el inicial sin modificaciones). Si no pusiera la propiedad "flex: 0 0 auto", los carruseles no harían scroll, si no que las tarjetas se redimensionarían para que todas cupiesen en el ancho del padre */
+
+.carousel__card {
+    flex: 0 0 auto;
+    border-radius: 0.6rem;
+}
+
+.promos-carousel__promo-card {
+    height: 12rem;
+    width: 30rem;
+    padding: 1rem 2rem;
+    background-color: var(--pink-color);
+}
+
+.common-carousel__common-card {
+    background-color: var(--black-color);
+}
+
+.promos-carousel__promo-card, .common-carousel__common-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.promo-card__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.promo-card__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white-color);
+}
+
+.promo-card__subtitle {
+    font-size: 0.8rem;
+    color: var(--white-color);
+}
+
+.btn--promo-card {
+    max-width: 50%;
+}
+
+/* Ilustración de las tarjetas del carrusel de promociones */
+
+.promo-card__image {
+    object-fit: contain;
+    max-width: 45%;
+    -webkit-filter: drop-shadow(0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.2));
+}
+
+.body__carousel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-heading__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.carousel-heading__see-more {
+    color: rgb(155, 155, 155);
+    font-size: 0.9rem;
+}
+
+.common-carousel__common-card {
+    height: 12rem;
+    width: 25rem;
+    position: relative;
+}
+
+.common-card__data {
+    position: absolute;
+    height: inherit;
+    padding: 1rem;
+    height: 100%;
+}
+
+/* Poner todo el contenido de las tarjetas de los carruseles de cursos por encima de la imagen de fondo */
+
+.common-carousel__common-card>*:not(.common-card__bg-img) {
+    z-index: 1;
+}
+
+.common-card__bg-img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: inherit;
+    opacity: 0.5;
+}
+
+.common-card__text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.common-card__title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--white-color);
+}
+
+.common-card__subtitle {
+    color: var(--white-color);
+}
+
+.common-card__level, .common-card__progress, .common-card__units {
+    position: absolute;
+    right: 1rem;
+    color: var(--white-color);
+}
+
+.common-card__level {
+    background-color: var(--pink-color);
+    top: 1rem;
+    padding: 0.1rem 0.6rem;
+    border-radius: 0.3rem;
+    color: var(--white-color);
+}
+
+.common-card__progress, .common-card__units {
+    bottom: 1rem;
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--secondary-bg-color);
+    height: 10rem;
+    border-top: 5px solid var(--pink-color);
+    display: flex;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.footer__logo {
+    max-width: 5rem;
+    margin-left: 3rem;
+}
+
+.footer__legalese {
+    flex: 1;
+}
+
+.legalese__link {
+    margin-right: 3rem;
+}
+
+/* Only devices with less than 900px screen width */
+
+@media (max-width: 900px) {
+    /*Volver a mostrar los elementos que se han ocultado en dispositivos grandes*/
+    .only-mobile {
+        display: initial;
+    }
+    /* Login and sign up */
+    .app--login, .app--signup {
+        background-image: none;
+        padding: 1rem 1rem 0 1rem;
+    }
+    .auth__illustration {
+        display: none;
+    }
+    .app__auth {
+        padding: 0;
+        height: unset;
+        height: 100vh;
+        align-items: flex-start;
+    }
+    .auth__login {
+        padding: 0;
+        box-shadow: none;
+        width: 100%;
+    }
+    .auth__heading {
+        align-self: unset;
+    }
+    .heading__icon {
+        margin-right: 1.5rem;
+    }
+    .auth__change-option {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--secondary-bg-color);
+    }
+    /* Home */
+    .main__body {
+        margin-bottom: 5.5rem;
+    }
+    .content__menu--right {
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+    }
+    .content__menu--left {
+        visibility: hidden;
+        position: absolute;
+    }
+    /* Mover el menú de navegación principal a la parte de abajo de la pantalla */
+    .content__menu--left .menu__nav {
+        background-color: var(--main-bg-color);
+        align-items: center;
+        visibility: visible;
+        z-index: 2;
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        justify-content: space-evenly;
+        width: 100vw;
+        height: 5rem;
+        margin: 0;
+    }
+    .content__menu--left .nav-item__title {
+        display: none;
+    }
+    .content__menu--left .nav__nav-item {
+        margin: 0;
+    }
+    .content__menu--left .nav__nav-item .nav-item__icon {
+        box-shadow: none;
+        font-size: 1.7rem;
+    }
+    .content__menu--left .nav__nav-item:not(.nav__nav-item--active) .nav-item__icon {
+        background-color: transparent;
+        color: var(--main-font-color);
+    }
+    /* Hamburger menu */
+    .content__side-menu--contracted {
+        display: none;
+    }
+    /* Menú de hamburguesa que solo se muestra cuando se hace clic en el icono de las tres líneas */
+    .side-menu__hamburger {
+        z-index: 3;
+        position: absolute;
+        height: 100vh;
+        width: 70%;
+        padding: 2rem 1rem;
+        background-color: var(--main-bg-color);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .side-menu__bg {
+        position: absolute;
+        z-index: 2;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .hamburger__avatar {
+        background-color: var(--main-bg-color);
+        top: 1.8rem;
+        right: 1.8rem;
+        width: 50%;
+        padding: 0.1rem;
+        border: 0.2rem solid var(--pink-color);
+    }
+    .hamburger__user-display-name {
+        font-weight: 700;
+    }
+    .hamburger__menu-list {
+        list-style-type: none;
+        margin-top: 1rem;
+        width: 100%;
+    }
+    .menu-list__nav-item {
+        padding: 2rem 0;
+    }
+    .menu-list__icon {
+        font-size: 1.5rem;
+        margin: 0 1rem 0 0;
+    }
+    /* Borde superior a los elementos del menú hamburguesa, menos al primero */
+    .menu-list__nav-item:not(:first-child) {
+        border-top: 1px solid var(--grey-color);
+    }
+    /* Borde inferior al último elemento del menú hamburguesa */
+    .menu-list__nav-item:last-child {
+        border-bottom: 1px solid var(--grey-color);
+    }
+    /* Main content */
+    .content__main {
+        padding: 2rem 0.5rem;
+    }
+    .main__searchbar {
+        display: none;
+    }
+    .main__heading {
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 3.2rem;
+        margin: 0;
+        padding: 0;
+    }
+    .heading__title {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        position: absolute;
+        top: 0;
+    }
+    .heading__plan {
+        color: var(--pink-color);
+        position: absolute;
+        bottom: 0;
+    }
+    .heading__hamburger-menu-icon {
+        position: absolute;
+        left: 0;
+        font-size: 2rem;
+    }
+    .content__menu--right .menu__avatar {
+        background-color: var(--main-bg-color);
+        visibility: visible;
+        position: absolute;
+        top: 1.8rem;
+        right: 1.8rem;
+        width: 3.3rem;
+        padding: 0.05rem;
+        border: 0.15rem solid var(--pink-color);
+    }
+    /* Ocultar las barras de scroll de los carruseles */
+    .body__promos-carousel::-webkit-scrollbar-track, .body__promos-carousel::-webkit-scrollbar, .body__promos-carousel::-webkit-scrollbar-thumb {
+        display: none;
+    }
+    /* Content after promos carousel */
+    .main__body {
+        zoom: 0.6;
+    }
+    .body__carousel {
+        margin: 3.5rem -0.8rem 1.5rem -1rem;
+        padding: 0 2rem 0.5rem 2rem;
+    }
+    .body__carousel-heading {
+        padding: 1.5rem 1rem 0 1rem;
+    }
+    /* Ocultar las tarjetas después de la 4ª de los carruseles de cursos en caso de que se añadan más de 4 */
+    .common-carousel__common-card:nth-child(n+5) {
+        /* Just in case more than 4 cards are added in HTML, this hides the 5th and beyond */
+        display: none;
+    }
+    /* Cambiar estructura de los carruseles de cursos para que sean dos filas y dos columnas */
+    .body__common-carousel {
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+    /* Posicionar y redimensionar las tarjetas de los carruseles de cursos para que ocupen los espacios adecuados */
+    .body__common-carousel .carousel__card {
+        width: 47%;
+        margin: 1.5%;
+    }
+    .common-carousel__common-card:last-child::after {
+        content: none;
+    }
+    /* Footer */
+    .footer {
+        display: none;
+    }
+}
+
+/* Cambiar el tamaño de letra del footer para dispositivos medianos */
+
+@media (max-width: 1200px) {
+    .footer {
+        font-size: 0.6rem;
+    }
+}

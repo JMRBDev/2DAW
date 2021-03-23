@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular cuota de un préstamo - Jose Rosendo</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <h1>Cuota del préstamo</h1>
+    <form method="POST" id="formulario">
+        <label for="capital">Capital</label>
+        <input type="number" name="capital" id="capital" step="any" value="2500" autofocus required>
+        <label for="interes">Interés</label>
+        <input type="number" name="interes" id="interes" step="any" value="5.95" required>
+        <label for="plazo">Meses</label>
+        <input type="number" name="plazo" id="plazo" step="any" value="18" required>
+
+        <input type="button" id="btnCalcular" value="Calcular">
+    </form>
+
+    <div id="respCalculo"></div>
+
+    <script src="./js/calcularCuota.js"></script>
+</body>
+
+</html>

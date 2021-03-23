@@ -1,0 +1,30 @@
+[
+    {
+        "nombre": "FP Básica",
+        "modulos": [
+            "Informática de Oficina",
+            "Contabilidad"
+        ]
+    },
+    {
+        "nombre": "SMR",
+        "modulos": [
+            "Sistemas Operativos",
+            "Redes Locales"
+        ]
+    },
+    {
+        "nombre": "DAM",
+        "modulos": [
+            "Sistemas Informáticos",
+            "Programación"
+        ]
+    },
+    {
+        "nombre": "DAW",
+        "modulos": [
+            "Desarrollo Web en Entorno Cliente",
+            "Diseño de Aplicaciones Web"
+        ]
+    }
+]

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio -- App Cursos</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/landing_styles.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!--Hoja de estilos de w3schools para el carousel slider-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body class="app">
+    <!--En el elemento main de los HTML se encuentran todos los elementos de la interfaz-->
+    <main class="app__content">
+
+        <!--Sección de contenido principal, donde se encuentra toda la información que va a resultar más útil para el usuario-->
+        <section class="content__main">
+            <nav class="main__navbar">
+                <picture>
+                    <source class="navbar__logo logo" media="(max-width: 320px)" srcset="./img/logo200x200.png">
+                    <source class="navbar__logo logo" media="(min-width: 800px)" srcset="./img/logo600x600.png">
+                    <img class="navbar__logo" src="./img/logo400x400.png" alt="JMRBDev Logo">
+                </picture>
+                <ul class="navbar__menu">
+                    <li class="menu__item menu__item--active">Inicio</li>
+                    <li class="menu__item">Cursos</li>
+                    <li class="menu__item">Sobre nosotros</li>
+                    <li class="menu__item">Blog</li>
+                    <li class="menu__item">Contacto</li>
+                </ul>
+                <div class="navbar__cta">
+                    <button class="btn btn--white cta--sign-in">Iniciar sesión</button>
+                    <button class="btn cta--sign-up" onclick="toggleUIMode();">Crear cuenta</button>
+                </div>
+            </nav>
+            <section class="main__carousel">
+                <div class="carousel-container w3-display-container">
+                    <div class="carousel-container__slide w3-display-container mySlides">
+                        <picture class="slide__picture">
+                            <source class="slide__img" media="(max-width: 320px)"
+                                srcset="./img/courses/course01-960x450.jpg">
+                            <source class="slide__img" media="(min-width: 800px)"
+                                srcset="./img/courses/course01-1920x900.jpg">
+                            <img class="slide__img" src="./img/courses/course01-1440x675.jpg" alt="JMRBDev Logo">
+                        </picture>
+                        <div class="slide__text w3-display-bottomleft">
+                            JavaScript
+                        </div>
+                    </div>
+
+                    <div class="carousel-container__slide w3-display-container mySlides">
+                        <picture class="slide__picture">
+                            <source class="slide__img" media="(max-width: 320px)"
+                                srcset="./img/courses/course02-960x450.jpg">
+                            <source class="slide__img" media="(min-width: 800px)"
+                                srcset="./img/courses/course02-1920x900.jpg">
+                            <img class="slide__img" src="./img/courses/course02-1440x675.jpg" alt="JMRBDev Logo">
+                        </picture>
+                        <div class="slide__text w3-display-bottomleft">
+                            HTML5
+                        </div>
+                    </div>
+
+                    <div class="carousel-container__slide w3-display-container mySlides">
+                        <picture class="slide__picture">
+                            <source class="slide__img" media="(max-width: 320px)"
+                                srcset="./img/courses/course03-960x450.jpg">
+                            <source class="slide__img" media="(min-width: 800px)"
+                                srcset="./img/courses/course03-1920x900.jpg">
+                            <img class="slide__img" src="./img/courses/course03-1440x675.jpg" alt="JMRBDev Logo">
+                        </picture>
+                        <div class="slide__text w3-display-bottomleft">
+                            Python
+                        </div>
+                    </div>
+
+                    <div class="carousel-container__slide w3-display-container mySlides">
+                        <img class="slide__img" src="./img/courses/course04.jpg" style="width:100%">
+                        <div class="slide__text w3-display-bottomleft">
+                            Java
+                        </div>
+                    </div>
+
+                    <div class="carousel-container__slide w3-display-container mySlides">
+                        <img class="slide__img" src="./img/courses/course05.jpg" style="width:100%">
+                        <div class="slide__text w3-display-bottomleft">
+                            Photoshop
+                        </div>
+                    </div>
+
+                    <div class="carousel-container__slide w3-display-container mySlides">
+                        <img class="slide__img" src="./img/courses/course06.jpg" style="width:100%">
+                        <div class="slide__text w3-display-bottomleft">
+                            Illustrator
+                        </div>
+                    </div>
+
+                    <div class="carousel-container__slide w3-display-container mySlides">
+                        <img class="slide__img" src="./img/courses/course07.jpg" style="width:100%">
+                        <div class="slide__text w3-display-bottomleft">
+                            Youtube
+                        </div>
+                    </div>
+
+                    <div class="carousel-container__slide w3-display-container mySlides">
+                        <img class="slide__img" src="./img/courses/course08.jpg" style="width:100%">
+                        <div class="slide__text w3-display-bottomleft">
+                            Windows 10
+                        </div>
+                    </div>
+
+                    <button class="btn btn--carousel btn--pink w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="btn btn--carousel btn--pink w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!--Footer general de la página, solo es visible en escritorio y dispositivos grandes-->
+    <footer class="footer">
+        <div class="footer__legalese">
+            <a href="#" class="legalese__link">Política de Privacidad y Cookies</a>
+            <a href="#" class="legalese__link">Términos de uso</a>
+        </div>
+        <p>Copyright © 20XX Nombre de la app</p>
+        <picture>
+            <source class="footer__logo logo" media="(max-width: 320px)" srcset="./img/logo200x200.png">
+            <source class="footer__logo logo" media="(min-width: 800px)" srcset="./img/logo600x600.png">
+            <img class="footer__logo logo" src="./img/logo400x400.png" alt="JMRBDev Logo">
+        </picture>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/theme.js"></script>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online - Jose Rosendo</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Tienda Online</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú de navegación -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+            <!-- Desplegable de inicio de sesión -->
+            <div class="nav-item dropdown" id="iniciar-sesion-dropdown-btn">
+                <a class="btn btn-primary dropdown-toggle" href="#" id="login-dropdown" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Iniciar sesión
+                </a>
+                <div class="dropdown-menu login-dropdown p-3" aria-labelledby="login-dropdown">
+                    <form class="form" id="inicio-sesion" onsubmit="event.preventDefault(); iniciarSesion();">
+                        <label for="username">Nombre de usuario</label>
+                        <input class="form-control" type="text" name="username" id="username" placeholder="usuario1"
+                            value="usuario1">
+
+                        <label for="password" class="mt-2">Contraseña</label>
+                        <input class="form-control" type="password" name="password" id="password"
+                            placeholder="contraseña1" value="contraseña1">
+
+                        <span class="text-danger" id="login-error-msg"></span>
+                        <input class="btn btn-primary form-control mt-4" id="iniciar-sesion-btn" role="button"
+                            type="submit" value="Iniciar sesión">
+                    </form>
+                </div>
+            </div>
+
+            <!-- Iniciar sesión -->
+            <button class="btn btn-danger nav-item d-none" id="cerrar-sesion-btn" onclick="cerrarSesion();">
+                Cerrar sesión
+            </button>
+
+            <div class="nav-item dropdown ml-3 d-none" id="cart-dropdown-btn">
+                <a class="btn dropdown-toggle" href="#" id="cart-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <div class="dropdown-menu cart-dropdown p-3" aria-labelledby="cart-dropdown">
+                    <ul id="carrito" class="list-group cart-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="p-5">
+        <div class="container">
+            <p>El ejercicio está muy verde, hay muchas cosas que no funcionan y otras funcionan mal.</p>
+            <div class="row" id="productos"></div>
+        </div>
+    </main>
+
+    <script src="./js/tienda_online.js"></script>
+
+    <!-- CDNs de JQuery y Bootstrap para algunos elementos de UI -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

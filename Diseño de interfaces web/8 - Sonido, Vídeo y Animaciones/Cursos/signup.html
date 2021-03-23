@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up -- App Cursos</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body class="app app--signup">
+    <!--En el elemento main de los HTML se encuentran todos los elementos de la interfaz-->
+    <main class="app__auth">
+        <!--Cuadro que contiene el formulario-->
+        <section class="auth__login">
+            <!--Título del formulario con el icono de volver atrás que solo es visible en móviles-->
+            <p class="auth__heading"><span class="heading__icon only-mobile"><i
+                        class="fa-fw fas fa-arrow-left"></i></span>Crear cuenta
+            </p>
+            <form class="auth__form" onsubmit="event.preventDefault();">
+                <div class="form__input">
+                    <label for="email" class="input__label">Correo electrónico</label>
+                    <input type="email" class="input__textbox input__textbox--email" name="email" id="email">
+                </div>
+
+                <div class="form__input">
+                    <label for="username" class="input__label">Nombre de usuario</label>
+                    <input type="text" class="input__textbox input__textbox--text" name="username" id="username">
+                </div>
+
+                <div class="form__input">
+                    <label for="password" class="input__label">Contraseña</label>
+                    <input type="password" class="input__textbox input__textbox--password" name="password"
+                        id="password">
+                </div>
+
+                <div class="form__input">
+                    <label for="birthdate" class="input__label">Fecha de nacimiento</label>
+                    <div class="input__date-group">
+                        <input type="number" class="input__textbox input__textbox--date" name="birthdate__day"
+                            id="birthdate__day" placeholder="Día" min="1" max="30">
+                        <select class="input__textbox input__textbox--date" name="birthdate__month"
+                            id="birthdate__month">
+                            <option value="01">Enero</option>
+                        </select>
+                        <input type="date" class="input__textbox input__textbox--date" name="birthdate_year"
+                            id="birthdate_year" placeholder="Año" min="01/01/1900" max="31/12/2021">
+                    </div>
+                </div>
+
+                <div class="form__input">
+                    <a href="index.html" class="btn input--btn">Continuar</a>
+                </div>
+
+                <a href="./login.html" class="auth__change-option">¿Ya tiene una cuenta?&nbsp;<span
+                        class="change-option__option">Iniciar sesión</span></a>
+            </form>
+        </section>
+        <img class="auth__illustration" src="./assets/img/illustrations/illustration1.png" alt="Login illustration">
+    </main>
+
+    <!--Footer general de la página, solo es visible en escritorio y dispositivos grandes-->
+    <footer class="footer">
+        <div class="footer__legalese">
+            <a href="#" class="legalese__link">Política de Privacidad y Cookies</a>
+            <a href="#" class="legalese__link">Términos de uso</a>
+        </div>
+        <p>Copyright © 20XX Nombre de la app</p>
+        <img class="footer__logo logo" src="./assets/img/logo.png" alt="JMRBDev Logo">
+    </footer>
+
+    <script src="./js/theme.js"></script>
+</body>
+
+</html>

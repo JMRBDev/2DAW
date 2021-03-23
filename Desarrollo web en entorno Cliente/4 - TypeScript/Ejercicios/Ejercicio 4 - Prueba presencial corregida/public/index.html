@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body class="m-3">
+    <h1>Biblioteca</h1>
+
+    <div class="m-3 w-25">
+        <form class="form" id="formulario" onsubmit="event.preventDefault(); ejecutar();">
+            <input type="hidden" name="codigo-actual" id="codigo-actual" value="">
+            <div class="row">
+                <label for="codigo">Código</label>
+                <input class="form-control" type="text" name="codigo" id="codigo" required>
+            </div>
+            <div class="row">
+                <label for="titulo">Título</label>
+                <input class="form-control" type="text" name="titulo" id="titulo" disabled>
+            </div>
+            <div class="row">
+                <label for="autor">Autor</label>
+                <input class="form-control" type="text" name="autor" id="autor" disabled>
+            </div>
+            <div class="row">
+                <label for="abonado">Abonado</label>
+                <input class="form-control" type="text" name="abonado" id="abonado">
+            </div>
+            <div class="m-2">
+                <input class="form-check-input" type="checkbox" name="prestado" id="prestado" disabled>
+                <label class="form-check-label" for="prestado">Código</label>
+            </div>
+
+            <span class="text-danger invisible" id="error-txt">El código del libro no existe o es incorrecto.</span>
+
+            <input class="mt-4 btn btn-primary form-control" id="form-btn" type="submit" value="Prestar/Devolver">
+        </form>
+    </div>
+
+    <script src="./js/biblioteca.js"></script>
+</body>
+
+</html>

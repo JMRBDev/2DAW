@@ -1,0 +1,19 @@
+/*------------------------------------------------
+
+Máster de Desarrollo de aplicaciones y sitios web
+HTML y CSS
+Alejandro Carmona Martos
+
+------------------------------------------------*/
+
+/* Cabecera */
+
+header{
+	width: 100%;
+	background-color: #000;
+	color: #fff;
+}
+
+header h1 {
+	color: #fff;
+}

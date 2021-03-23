@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio -- App Cursos</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body class="app">
+    <!--En el elemento main de los HTML se encuentran todos los elementos de la interfaz-->
+    <main class="app__content">
+        <!--Menú de navegación principal, menú izquierdo-->
+        <aside class="content__menu content__menu--left content__menu--expanded">
+            <img class="menu__logo" src="./assets/img/logo.png" alt="JMRBDev Logo">
+            <ul class="menu__nav">
+                <li class="nav__nav-item nav__nav-item--active"><span
+                        class="nav-item__icon fa-fw fas fa-home"></span><span class="nav-item__title">Inicio</span></li>
+                <li class="nav__nav-item"><span class="nav-item__icon fa-fw fas fa-book-reader"></span><span
+                        class="nav-item__title">Cursos</span></li>
+                <li class="nav__nav-item"><span class="nav-item__icon fa-fw fas fa-pen-alt"></span><span
+                        class="nav-item__title">Crear curso</span></li>
+                <li class="nav__nav-item"><span class="nav-item__icon fa-fw fas fa-list-ul"></span><span
+                        class="nav-item__title">Categorías</span></li>
+                <li class="nav__nav-item" onclick="toggleUIMode();"><span
+                        class="nav-item__icon fa-fw fas fa-cog"></span><span
+                        class="nav-item__title">Configuración</span></li>
+            </ul>
+            <div class="menu__toggle menu__toggle--left" onclick="toggleMenu(this);"><span
+                    class="nav-item__icon fa-fw fas fa-arrow-alt-circle-left"></span><span
+                    class="nav-item__title">Contraer</span>
+            </div>
+        </aside>
+
+        <!--Menú de hamburguesa que es visible solamente en móviles (la clase "only-mobile" pone display: none a los elementos que la contengan en dispositivos grandes)-->
+        <div class="content__side-menu content__side-menu--contracted only-mobile">
+            <aside class="side-menu__hamburger">
+                <img class="menu__avatar hamburger__avatar" src="./assets/img/logo.png" alt="User avatar">
+                <p class="menu__user-display-name hamburger__user-display-name">Buenos días, Nombre</p>
+                <ul class="hamburger__menu-list">
+                    <li class="menu-list__nav-item"><span class="menu-list__icon fa-fw fas fa-user"></span><span
+                            class="nav-item__title">Mi perfil</span></li>
+                    <li class="menu-list__nav-item"><span class="menu-list__icon fa-fw fas fa-link"></span><span
+                            class="nav-item__title">Invitar a amigos</span></li>
+                    <li class="menu-list__nav-item"><span class="menu-list__icon fa-fw fas fa-question"></span><span
+                            class="nav-item__title">Soporte y ayuda</span></li>
+                </ul>
+            </aside>
+            <!--Este elemento es el fondo oscurecido tras el menú hamburguesa, cuando se hace clic, se oculta el menú-->
+            <div class="side-menu__bg" onclick="toggleHamburger();"></div>
+        </div>
+
+        <!--Sección de contenido principal, donde se encuentra toda la información que va a resultar más útil para el usuario-->
+        <section class="content__main">
+            <!--Heading, incluye el título de la página (Inicio, Cursos...) y un buscador-->
+            <div class="main__heading">
+                <!--Icono del menú de hamburguesa, solo visible en móviles-->
+                <div class="heading__hamburger-menu-icon only-mobile" onclick="toggleHamburger();">
+                    <span class="fa-fw fas fa-bars"></span>
+                </div>
+                <h1 class="heading__title">Inicio</h1>
+                <span class="heading__plan only-mobile">Plan</span>
+                <div class="main__searchbar">
+                    <span class="searchbar__icon fas fa-search"></span>
+                    <input class="searchbar__input input__textbox input__textbox--text" type="text" name="searchbar"
+                        id="searchbar" placeholder="Buscar">
+                </div>
+            </div>
+            <!--Dentro de la sección principal, hay un cuerpo principal por debajo del heading. Aquí se encuentran los carruseles y contenidos de las páginas más concretamente-->
+            <div class="main__body">
+                <!--Carrusel de tarjetas, en este caso es de promociones pero reutiliza el mismo estilo para todos los carruseles de la página-->
+                <ul class="body__promos-carousel body__carousel">
+                    <li class="promos-carousel__promo-card carousel__card">
+                        <div class="promo-card__data">
+                            <p class="promo-card__title">Título de la oferta o promoción</p>
+                            <p class="promo-card__subtitle">Subtítulo</p>
+                            <button class="btn btn--white btn--promo-card">CTA</button>
+                        </div>
+                        <img class="promo-card__image" src="./assets/img/illustrations/illustration2.png"
+                            alt="Promo card illustration">
+                    </li>
+                    <li class="promos-carousel__promo-card carousel__card">
+                        <div class="promo-card__data">
+                            <p class="promo-card__title">Título de la oferta o promoción</p>
+                            <p class="promo-card__subtitle">Subtítulo</p>
+                            <button class="btn btn--white btn--promo-card">CTA</button>
+                        </div>
+                        <img class="promo-card__image" src="./assets/img/illustrations/illustration3.png"
+                            alt="Promo card illustration">
+                    </li>
+                    <li class="promos-carousel__promo-card carousel__card">
+                        <div class="promo-card__data">
+                            <p class="promo-card__title">Título de la oferta o promoción</p>
+                            <p class="promo-card__subtitle">Subtítulo</p>
+                            <button class="btn btn--white btn--promo-card">CTA</button>
+                        </div>
+                        <img class="promo-card__image" src="./assets/img/illustrations/illustration4.png"
+                            alt="Promo card illustration">
+                    </li>
+                    <li class="promos-carousel__promo-card carousel__card">
+                        <div class="promo-card__data">
+                            <p class="promo-card__title">Título de la oferta o promoción</p>
+                            <p class="promo-card__subtitle">Subtítulo</p>
+                            <button class="btn btn--white btn--promo-card">CTA</button>
+                        </div>
+                        <img class="promo-card__image" src="./assets/img/illustrations/illustration5.png"
+                            alt="Promo card illustration">
+                    </li>
+                </ul>
+
+                <!--Al contrario que con las promociones, en este carrusel hay un título-->
+                <div class="body__carousel-heading">
+                    <span class="carousel-heading__title">Mis cursos</span>
+                    <span class="carousel-heading__see-more">Ver más</span>
+                </div>
+                <!--Carrusel de tarjetas, en este caso es de cursos obtenidos por el usuario pero reutiliza el mismo estilo para todos los carruseles de la página-->
+                <ul class="body__common-carousel body__carousel">
+                    <li class="common-carousel__common-card carousel__card">
+                        <div class="common-card__data">
+                            <div class="common-card__text">
+                                <p class="common-card__title">Título</p>
+                                <p class="common-card__subtitle">Categoría</p>
+                            </div>
+                        </div>
+                        <span class="common-card__level">Nivel</span>
+                        <img class="common-card__progress" src="./assets/img/progreso.png" alt="Course progress">
+                        <img class="common-card__bg-img" src="./assets/img/courses/course01.jpg" alt="Course 01 image">
+                    </li>
+                    <li class="common-carousel__common-card carousel__card">
+                        <div class="common-card__data">
+                            <div class="common-card__text">
+                                <p class="common-card__title">Título</p>
+                                <p class="common-card__subtitle">Categoría</p>
+                            </div>
+                        </div>
+                        <span class="common-card__level">Nivel</span>
+                        <img class="common-card__progress" src="./assets/img/progreso.png" alt="Course progress">
+                        <img class="common-card__bg-img" src="./assets/img/courses/course02.jpg" alt="Course 01 image">
+                    </li>
+                    <li class="common-carousel__common-card carousel__card">
+                        <div class="common-card__data">
+                            <div class="common-card__text">
+                                <p class="common-card__title">Título</p>
+                                <p class="common-card__subtitle">Categoría</p>
+                            </div>
+                        </div>
+                        <span class="common-card__level">Nivel</span>
+                        <img class="common-card__progress" src="./assets/img/progreso.png" alt="Course progress">
+                        <img class="common-card__bg-img" src="./assets/img/courses/course03.jpg" alt="Course 01 image">
+                    </li>
+                    <li class="common-carousel__common-card carousel__card">
+                        <div class="common-card__data">
+                            <div class="common-card__text">
+                                <p class="common-card__title">Título</p>
+                                <p class="common-card__subtitle">Categoría</p>
+                            </div>
+                        </div>
+                        <span class="common-card__level">Nivel</span>
+                        <img class="common-card__progress" src="./assets/img/progreso.png" alt="Course progress">
+                        <img class="common-card__bg-img" src="./assets/img/courses/course04.jpg" alt="Course 01 image">
+                    </li>
+                </ul>
+
+                <!--Al contrario que con las promociones, en este carrusel hay un título-->
+                <div class="body__carousel-heading">
+                    <span class="carousel-heading__title">Cursos recomendados</span>
+                    <span class="carousel-heading__see-more">Ver más</span>
+                </div>
+                <!--Carrusel de tarjetas, en este caso es de cursos recomendados pero reutiliza el mismo estilo para todos los carruseles de la página-->
+                <ul class="body__common-carousel body__carousel">
+                    <li class="common-carousel__common-card carousel__card">
+                        <div class="common-card__data">
+                            <div class="common-card__text">
+                                <p class="common-card__title">Título</p>
+                                <p class="common-card__subtitle">Categoría</p>
+                            </div>
+                        </div>
+                        <span class="common-card__level">Nivel</span>
+                        <span class="common-card__units"> 10 unidades</span>
+                        <img class="common-card__bg-img" src="./assets/img/courses/course05.jpg" alt="Course 01 image">
+                    </li>
+                    <li class="common-carousel__common-card carousel__card">
+                        <div class="common-card__data">
+                            <div class="common-card__text">
+                                <p class="common-card__title">Título</p>
+                                <p class="common-card__subtitle">Categoría</p>
+                            </div>
+                        </div>
+                        <span class="common-card__level">Nivel</span>
+                        <span class="common-card__units"> 10 unidades</span>
+                        <img class="common-card__bg-img" src="./assets/img/courses/course06.jpg" alt="Course 01 image">
+                    </li>
+                    <li class="common-carousel__common-card carousel__card">
+                        <div class="common-card__data">
+                            <div class="common-card__text">
+                                <p class="common-card__title">Título</p>
+                                <p class="common-card__subtitle">Categoría</p>
+                            </div>
+                        </div>
+                        <span class="common-card__level">Nivel</span>
+                        <span class="common-card__units"> 10 unidades</span>
+                        <img class="common-card__bg-img" src="./assets/img/courses/course07.jpg" alt="Course 01 image">
+                    </li>
+                    <li class="common-carousel__common-card carousel__card">
+                        <div class="common-card__data">
+                            <div class="common-card__text">
+                                <p class="common-card__title">Título</p>
+                                <p class="common-card__subtitle">Categoría</p>
+                            </div>
+                        </div>
+                        <span class="common-card__level">Nivel</span>
+                        <span class="common-card__units"> 10 unidades</span>
+                        <img class="common-card__bg-img" src="./assets/img/courses/course08.jpg" alt="Course 01 image">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!--Menú de vista previa del perfil de usuario-->
+        <aside class="content__menu content__menu--right content__menu--expanded">
+            <img class="menu__avatar" src="./assets/img/logo.png" alt="User avatar">
+            <p class="menu__user-display-name">Nombre Apellidos</p>
+            <ul class="menu__personal-details">
+                <li class="personal-details__item">
+                    <div class="personal-details__heading">
+                        <span class="details-item__title">Estadísticas</span>
+                        <span class="details-item__see-more">Ver más</span>
+                    </div>
+                    <!--Dentro de esta caja va la gráfica de estadísticas del usuario-->
+                    <div class="details-item__box">
+                        <p>🎉🎉🎉🎉🎉🎉🎉🎉</p>
+                    </div>
+                </li>
+                <li class="personal-details__item">
+                    <div class="personal-details__heading">
+                        <span class="details-item__title">Logros</span>
+                        <span class="details-item__see-more">Ver más</span>
+                    </div>
+                    <!--Dentro de esta caja va la listta de logros del usuario-->
+                    <div class="details-item__box">
+                        <p>🎉🎉🎉🎉🎉🎉🎉🎉</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="menu__toggle menu__toggle--left" onclick="toggleMenu(this);"><span
+                    class="nav-item__icon fa-fw fas fa-arrow-alt-circle-right"></span><span
+                    class="nav-item__title">Contraer</span>
+            </div>
+        </aside>
+    </main>
+
+    <!--Footer general de la página, solo es visible en escritorio y dispositivos grandes-->
+    <footer class="footer">
+        <div class="footer__legalese">
+            <a href="#" class="legalese__link">Política de Privacidad y Cookies</a>
+            <a href="#" class="legalese__link">Términos de uso</a>
+        </div>
+        <p>Copyright © 20XX Nombre de la app</p>
+        <img class="footer__logo logo" src="./assets/img/logo.png" alt="JMRBDev Logo">
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/theme.js"></script>
+</body>
+
+</html>

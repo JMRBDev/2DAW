@@ -1,0 +1,280 @@
+
+/*------------------------------------------------
+
+Máster de Desarrollo de aplicaciones y sitios web
+HTML y CSS
+Alejandro Carmona Martos
+
+------------------------------------------------*/
+/* importar fuente de letra para la web */
+@import url('https://fonts.googleapis.com/css?family=Domine');
+
+/* Eliminar el padding y margin que el navegador introduce por defecto, y aplicar la funete de letra principal*/
+body{
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif; 
+}
+
+/*************************
+Para usos en todo el DOM 
+************************/
+
+/* Parrafos y definiciones que tengan el mismo estilo:
+Color de la fuente, el espacio entre lineas
+Padding superior e inferior, para crear una pequeña separación y el texto justificado*/
+
+p, dd{
+	padding: 12px 0px;
+	color: #222;
+	line-height: 1.4rem;
+	text-align: justify;
+}
+
+/*Quitar el margen inicial que mete por defecto los navegadores.*/
+dd{
+	margin-left: 0px;
+	
+}
+
+/* Para las citas:
+Borde superior e inferior.
+Un espacio interno de 20px para separarlo del borde.
+Espacio entre lineas y tamaño de la fuente.
+Texto justificado y color de la fuente.
+*/
+blockquote{
+	border-top:3px solid #DDD;
+	border-bottom:3px solid #DDD;
+	padding: 20px;
+	font-size: 1.2rem;
+	line-height: 1.7rem;
+	text-align: justify;
+	color: #222;
+}
+
+/* Cuando el bloque de la citas cambia de color le añadimos .gris
+que nos cambia el fondo, el tamaño de la funte, quita los bordes superiores e inferiores 
+añade un borde lateral izquierdo.*/
+blockquote.gris{
+	background: #EEE;
+	font-size: 1rem;
+	border: 0;
+	border-left: 3px solid #DDD;
+}
+
+/* Titulos, cambiamos la tipografía con la importada y damos el color a la fuente*/
+h1,h2,h3,.metadatos-articulo{
+	font-family: 'Domine', serif;
+	color: #222;
+}
+/* h3 y h3 le damos espacio y hacemos que tenga un peso más alto la fuente.*/
+h2,h3{
+	font-weight: bold;
+	margin: 10px 0px 20px 0px;
+	text-align: left;
+}
+/* Tamaño a los títulos */
+h2{font-size: 2.7rem;}
+h3{font-size: 2rem;}
+
+/* Aumentamos el tamaño de los títulos de las descripciones y tipo de peso, además de dar margen.*/
+dt{
+	font-size: 2rem;
+	margin: 10px 0px;
+	font-weight: lighter;
+}
+/*Para posicionar los iframe de videos que tenemos*/
+iframe{
+	display: block;
+	margin: 10px auto;
+}
+
+/* Espacio entre las líneas de las listas.*/
+li {line-height: 40px;}
+
+/* crear un contendor para que el contenido central no se expanda al 100% de la pantalla.*/
+.contenedor{
+	width: 70%;
+	margin:0 auto;
+	padding: 20px 0px;
+}
+
+/******************** 
+      Cabecera 
+*********************/
+
+/*Color de fondo de la cabecera*/
+header{background-color: #000;}
+
+/*Tamaño máximo del logotipo */
+header img{
+	max-width: 227px;;
+}
+
+/*Dandole color, peso y tamaño a la fuente del título principal*/
+header h1{
+	color: #fff;
+	font-weight: lighter;
+	margin: 0;
+	font-size: 3.2rem;
+}
+
+/************************
+   Menú de navegación 
+ ************************/
+
+/* Quitamos la decoración por defecto de los enlaces para que no estén subrayados, 
+y le decimos que el borde y padding se incluya en la caja y no modique el ancho para después hacer 
+hover en los enlaces y que no deforme los tamaños*/
+a{
+	text-decoration: none;
+	box-sizing: border-box;
+}
+/* Damos el ancho completo al menú de navegación y añadimos la línea de separación inferior gris*/
+nav{
+	width: 100%;
+	border-bottom: solid 3px #DDD;
+}
+
+/* Hacemos que los elemento tengan una disposición flexible y así poder ajustarlos al centro con las nuevas propiedades flexibles de CSS3*/
+nav ul{
+	display: flex;
+	justify-content: center;
+	list-style: none;
+}
+
+/* Damos forma a los elementos de navegación:
+Espaciado entre las letras.
+Color de la fuente, el espacio del enlace y su caja contenedora 
+y no haya margenes entre enlaces.
+*/
+
+nav ul li a{
+	letter-spacing: 1px;
+	color: #222;
+	padding: 8px 15px;
+	margin: 0px;
+}
+
+/*Aplicamos un borde inferior al hacer hover al enlace 
+y a la clase actual que nos marca en la página que nos encontramos*/
+
+nav ul li:hover, .actual{border-bottom: solid 3px #CC0000;}
+
+/********************
+       Artículo 
+ ********************/
+
+/*Alineamos texto al centro*/
+article .pie-foto{text-align: center;}
+
+/*Justificamos el texto, damos un poco de padding y los margenes laterales*/
+section p{
+	text-align: justify;
+	padding: 1px 0px;
+	margin-left: 5px;
+    margin-right: 5px;
+}
+/*Cambiamos el color de los enlaces dentro de los párrafos*/
+section a{color: #CC0000;}
+
+/*Definimos tamaño máximo y posición de las imágenes en los artículos*/
+section img{
+	max-width: 700px;
+	margin: 0 auto;
+	display: block;
+}
+
+/* Alinemos los pie de foto, damos margenes para que no se pegue al contenido y reducimos la fuente*/
+div.pie-foto{
+	text-align: center;
+	margin-top: 4px;
+	padding-top: 4px;
+	font-size: 0.75rem
+}
+/* ademuamos también el tamaño de los enlaces del pie de foto. */
+div.pie-foto a{
+	font-size: 0.75rem
+}
+
+/***************
+      Autor 
+ ***************/
+
+/* Indicamos el tamaño máximo del apartado de autor.
+Lo centramos con respecto al contendor y posteriormente hacemos que 
+los elementos sean flexibles y alineados al centro (tanto horzintal como verticalmente.)*/
+#autor{
+	max-width: 700px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/*Hacemos cirular la visualización de la foto y le damos espacio con el texto.*/
+#autor img{
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+/* Damos el tamaño máximos del pie del artículo y lo centramos con respecto al contendor.
+Separamos de la parte superior, y reducimos la fuente, además de hacer la letra cursiva.*/
+.pie-articulo{
+	max-width: 700px;
+	margin: 0 auto;
+	display: block;
+	font-size: 0.75rem;
+	padding-top: 30px;
+	font-style: italic;
+}
+
+/*Adecuamos el tamaño del enlace*/
+.pie-articulo a{font-size: 0.75rem;}
+
+/*******************
+       Listas 
+********************/
+
+/*hacemos que los iconos dentro de las lista se alineen con el contenido 
+y estén verticalmente en el medio*/
+section li img{
+	display: inline-flex;
+	vertical-align: middle;
+}
+
+/* Hacemos que las listas que estén dentro de la lista ordenada tenga una decoración de cuadro */
+ol ul {list-style: square;}
+
+/*En el segundo hijo de la lista ordenada hacemos que no tenga estilo (Prensa y En la red) 
+Ya que tienen el icono.*/
+ol > li:nth-child(2) > ul{ list-style: none;}
+
+/*Los elementos la sublista de la sublista de la lista ordenada 
+y los elemento de la sublista del tercer elemento tengan otra tipografía y estén en cursiva.*/
+ol > li > ul > li > ul > li,
+ol > li:nth-child(3) > ul > li{
+	font-style: italic;
+	font-family: serif
+}
+
+/*******************
+     Pie de página
+********************/
+
+/* Definimos fondo, separación con respecto a la sección principal y el espacio interno inferior*/
+footer{
+	background:#3B3B3B;
+	margin-top: 40px;
+	padding-bottom: 30px;
+}
+
+/*Damos color, tamaño de la fuente y espacio y márgenes al párrafo del pié de página. */
+footer p{
+	color:#fff;
+	padding: 5px 0px;
+	margin:0;
+	font-size: 0.85rem;
+}
+
+

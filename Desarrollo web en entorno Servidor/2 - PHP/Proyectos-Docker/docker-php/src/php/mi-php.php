@@ -1,0 +1,1 @@
+<p>Se pueden usar archivos externos con require 'file' ó include(file)</p>

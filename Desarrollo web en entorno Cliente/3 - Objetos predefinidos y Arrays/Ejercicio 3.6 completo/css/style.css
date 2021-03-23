@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+* {
+    font-family: 'Inter', sans-serif;
+    outline: none;
+}
+
+body {
+    background-color: #181818;
+    padding: 0 5rem;
+}
+
+#titulo {
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    color: white;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+#juego {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+    height: 83vh;
+}
+
+#juego>div {
+    border: 3px solid white;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition-duration: 100ms;
+}
+
+#info {
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+#gamemode {
+    background-color: red;
+    border: none;
+    height: 2.5rem;
+    width: 12rem;
+    padding: 0.6rem 1rem;
+    border-radius: 0.2rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    color: white;
+}
+
+#div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#div3 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+#div4 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+#div5 {
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+#div6 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#div7 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+#div8 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+#div9 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+#div10 {
+    grid-area: 2 / 5 / 3 / 6;
+}
+
+#div11 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+#div12 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+#div13 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+#div14 {
+    grid-area: 3 / 4 / 4 / 5;
+}
+
+#div15 {
+    grid-area: 3 / 5 / 4 / 6;
+}
+
+#div16 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+#div17 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+#div18 {
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+#div19 {
+    grid-area: 4 / 4 / 5 / 5;
+}
+
+#div20 {
+    grid-area: 4 / 5 / 5 / 6;
+}

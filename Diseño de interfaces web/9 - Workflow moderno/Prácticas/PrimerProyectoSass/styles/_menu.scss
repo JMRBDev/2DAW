@@ -1,0 +1,20 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 60px 0;
+
+    li {
+        display: inline-block;
+    
+        a {
+            text: {
+                decoration: none;
+                align: center;
+                transform: uppercase;
+            }
+        color: whitesmoke;
+        padding: 20px;
+        background-color: darkblue;
+        }
+    }
+}

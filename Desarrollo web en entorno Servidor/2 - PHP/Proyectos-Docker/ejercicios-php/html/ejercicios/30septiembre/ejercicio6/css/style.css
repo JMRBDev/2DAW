@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    padding: 2rem;
+}
+
+h1 {
+    margin-bottom: 4rem;
+}
+
+.lista-productos {
+    display: inline;
+    list-style-type: none;
+}
+
+.item-producto {
+    float: left;
+    margin: auto 4rem;
+}
+
+.nombre-producto, .precio-producto {
+    text-align: center;
+}
+
+.btn-comprar {
+    padding: 0.3rem 0.8rem;
+}
+
+img {
+    max-width: 8rem;
+}

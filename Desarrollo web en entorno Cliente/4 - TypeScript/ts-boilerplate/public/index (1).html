@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript Boilerplate</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <form class="d-flex flex-column">
+
+        <fieldset class="d-flex flex-column">
+            <legend>./</legend>
+            <div>
+                <label>Cambiar el nombre del archivo <strong>main.ts</strong> por algo más descriptivo</label>
+                <input type="checkbox">
+            </div>
+            <div>
+                <label>Borrar los archivos <strong>./public/js/main.js</strong> y <strong>./public/js/main.js.map</strong> para que se creen con el nuevo nombre del .ts</label>
+                <input type="checkbox">
+            </div>
+        </fieldset>
+
+        <fieldset class="d-flex flex-column">
+            <legend>./package.json</legend>
+            <div>
+                <label>Cambiar el <strong>nombre</strong> del proyecto</label>
+                <input type="checkbox">
+            </div>
+            <div>
+                <label>Cambiar el <strong>autor</strong> del proyecto</label>
+                <input type="checkbox">
+            </div>
+        </fieldset>
+
+        <fieldset class="d-flex flex-column">
+            <legend>./index.html</legend>
+            <div>
+                <label>Cambiar el <strong>título</strong> del sitio</label>
+                <input type="checkbox">
+            </div>
+            <div>
+                <label>Quitar el <strong>CDN de Bootstrap</strong></label>
+                <input type="checkbox">
+            </div>
+            <div>
+                <label>Cambiar la <strong>ruta del script JS</strong> para que tenga el mismo nombre que el .ts de ./src/</label>
+                <input type="checkbox">
+            </div>
+            <div>
+                <label>Borrar todo este tinglado 😊</label>
+                <input type="checkbox">
+            </div>
+        </fieldset>
+    </form>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

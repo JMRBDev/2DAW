@@ -1,0 +1,415 @@
+/*------------------------------------------------
+
+Máster de Desarrollo de aplicaciones y sitios web
+HTML y CSS
+Alejandro Carmona Martos
+PEC2
+
+------------------------------------------------*/
+
+/* Importamos las fuentes para nuestra web*/
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:700');
+
+/*
+Paleta de colores:
+ #000078 AZUL OSCURO;
+ #73EDFF AZUL CLARO;
+ #FFE000 AMARILLO;
+ #D0D0D0 GRIS OSCURO;
+ #F0F0F0 GRIS CLARO;
+*/
+
+/* Eliminar el padding y margin que el navegador introduce por defecto, y aplicar la funete de letra principal*/
+body{
+	margin: 0;
+	padding: 0;
+    font-family: 'Lato', sans-serif;
+    color:#000078;
+}
+
+/* Clase para forzar que los float tenga una altura suficiente */
+.clear{
+	clear: both;
+}
+
+/* Fuente para los títulos de la web  */
+h1,h2,h3{
+    font-family: 'Merriweather', serif;
+}
+/* Tamaño de los títulos principales*/
+h1{font-size: 3.5rem;}
+
+
+/* Quitamos la decoración por defecto de los enlaces para que no estén subrayados, 
+y le decimos que el borde y padding se incluya en la caja y no modique el ancho para después hacer 
+hover en los enlaces y que no deforme los tamaños*/
+a{
+	text-decoration: none;
+	box-sizing: border-box;
+	color:#000078;
+}
+
+/* enlaces e input type submit para que tengan forma de botón: 
+fondo, espacio interno, borde redondeado, transición al hacer hover en el ratón*/
+a.boton, input.boton{
+	padding: 15px 20px;
+	background: #FFE000;
+	border-radius: 10px;
+	-webkit-transition: background 2s; /* Safari */
+    transition: background 0.5s;
+}
+
+/* Efecto hover al pasar el ratón por encima, cambiamos el fondo. */
+a.boton:hover,input.boton:hover{
+	background: #73EDFF;
+}
+a:hover{color:#222;}
+
+
+/******************** 
+      Cabecera 
+*********************/
+/* Cabecera. Fijamos un ancho para que se ajuste a nuestro grid elegido y  alineamos al centro*/
+header{
+	width: 80%;
+	margin: 0 auto;
+}
+/* Logo como elemento flotante a la izquierda*/
+header div{float: left;}
+
+/************************
+   Menú de navegación 
+ ************************/
+
+/* Menú de navegacón como elemento flotante a la derecha*/
+header nav{float: right;}
+
+
+/* Hacemos que los elemento tengan una disposición flexible y así poder ajustarlos al centro con las nuevas propiedades flexibles de CSS3*/
+nav ul{
+	display: flex;
+	justify-content: center;
+	list-style: none;
+}
+
+nav ul li{
+	padding: 8px 15px;
+	margin: 0px;
+}
+
+/* Damos forma a los elementos de navegación:
+Espaciado entre las letras.
+Color de la fuente, el espacio del enlace y su caja contenedora 
+y no haya margenes entre enlaces.
+*/
+
+nav ul li a{
+	letter-spacing: 1px;
+	font-size: 1.2rem;
+}
+
+/*Aplicamos un borde inferior al hacer hover al enlace 
+y a la clase actual que nos marca en la página que nos encontramos*/
+
+nav ul li a:hover, .actual{border-bottom: solid 3px #FFE000;}
+
+/*******************
+    Inicio
+********************/
+
+/* Cambiamos el estilo de los subtitulos en toda la página de inicio*/
+
+/* Destacado **********************************************/
+
+.index h2{
+	margin: 0;
+	font-size: 2rem;
+	font-weight: lighter;
+	text-align: center;
+	padding-top: 30px;
+}
+
+/* Destacado fijamos un ancho para que se ajuste a nuestro grid elegido y  alineamos al centro*/
+.inicioDestacado{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+/* Texto con parrafo y botón lo hacemos flotante a la izquierda*/
+.inicioDestacado div{float: left;}
+
+/* Video de Youtube flotante a la derecha*/
+.inicioDestacado iframe{float: left;}
+
+/* damos un ancho del 50% para dividir en dos columnas, y añadimos el color de la fuente.*/
+.inicioDestacado div, .inicioDestacado iframe{
+	width: 50%; 
+	color:#000078 
+}
+
+/* Cambiamos el estilo del h1 para que se asimile a un párrafo, 
+pero he elegido este en concreto por su valor semantico a la hora de las búsquedas
+a través de motores de busquedas. */
+.inicioDestacado h1{
+	font-size: 1.2rem;
+	font-family: 'Lato' , sans-serif;
+	font-weight: lighter;
+	padding-right: 60px;
+	margin-bottom: 30px;
+}
+
+/* Cambiamos el Subitutlo indicado, ya que el tamaño 
+es mayor al de los subtitulos creados para todo el inicio*/
+.inicioDestacado h2{
+	font-size: 3rem;
+	margin: 0;
+	padding-right: 60px;
+	text-align: left;
+}
+
+
+/* Cifras **************************************************/
+
+/* Definimos características principales a esta sección. 
+Texto alineado al centro, color de la fuente, fondo gris y 
+los espacios internos y márgenes de la caja.*/
+.inicioCifras{
+	text-align: center;
+	color:#000078;
+	background: #F0F0F0;
+	padding-top: 50px;
+	margin-top: 40px;
+}
+
+/*Creamos las tres columnas alineadas a la izquierda definiendo el fondo, 
+el espacio interno y el tamaño de fuente*/
+.inicioCifrasColumnas div{
+	width: 33%;
+	float: left;
+	background: #F0F0F0;
+	padding-top: 30px;
+	padding-bottom: 70px;
+	font-size: 2rem;
+}
+
+/* Definimos las propiedades de los iconos fuente. Damos mayor tamaño 
+y le damos una disposición en bloque para que ocupen toda su fila y el contenido 
+siguiente se posicione en la fila inferior*/
+.inicioCifrasColumnas div i{
+	font-size: 4.5rem;
+	display: block;
+	margin-bottom: 10px;
+}
+/*Hacemos que el texto se posiciones debajo con un tamañano normal de parrafo. 
+Las cifras tiene el tamaño del .inicioCifrasColumnas div*/
+.inicioCifrasColumnas div span{
+	display: block;
+	font-size: 1rem;
+}
+
+/* Objetivos **********************************************/
+
+/* Definimos característica principal a esta sección el color de la fuente.*/
+
+.inicioObjetivos{
+	color:#000078;
+}
+
+
+/* Formateamos la lista para que tenga la apariencia de la propuesta recibida
+Eliminamos estilos de lista predefinicos.
+Damos un espacio interior.
+Un ancho máximo.
+Bordes derecho e inferior.
+Separamos los li con un margen superior.*/
+.inicioObjetivos ul li{
+	list-style: none;
+	margin: 0 auto;
+	max-width: 60%;
+	padding: 30px;
+	border: 0;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
+	margin-top: 10px;
+}
+
+/* Hacemos negrita la palabra destacad de esta sección*/
+.inicioObjetivos span{
+	font-weight: bold;
+}
+
+
+/*******************
+    Publicar
+********************/
+/* Publicar.Fijamos un ancho para que se ajuste a nuestro grid elegido y  alineamos al centro*/
+.publicarFormulario{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+/* corregimos el margen del título principal*/
+.publicar h1{
+	margin-bottom: 0px;
+}
+/* corregimos el margen de los parrafos */
+.publicar p{
+	margin-top:0px;
+}
+/* Corregimos el margen de los subtitulos*/
+.publicar h2{
+	margin: 40px 0px 10px 0px;
+}
+
+/* Damos un máximo de ancho y centramos el formulario*/
+form{
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+/* Editamos los input y select de nuestro formulario:
+Disposición en bloque, ancho 100%, quitamos el borde predeterminado
+y le añadimos el borde inferior*/
+.publicar form input[type="text"],
+.publicar form input[type="date"],
+.publicar form input[type="email"],
+.publicar form input[type="tel"],
+.publicar form select{
+	display: block;
+	margin:2px 0px 30px 0px;
+	width: 100%;
+	border: 0;
+	border-bottom: solid 1px #000078;
+}
+/* Damos espacio interno a los input que se visualizan con una caja.*/
+.publicar form input[type="text"],
+.publicar form input[type="date"],
+.publicar form input[type="email"],
+.publicar form input[type="tel"]{	
+	padding-top: 10px;
+	padding-bottom:10px;
+}
+
+/* Añadimos color a los placeholder en todos los navegadores*/
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color:#000;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color:#000;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color:#000;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color:#000;
+}
+::placeholder{
+  color:#000;
+}
+
+/* Los radio los agrupamos en un div con disposicion en linea y con un ancho 100%*/
+.radio{
+	display: inline-block;
+	margin-bottom:20px;
+	width: 100%;
+}
+
+/* Formateamos con el ancho 100%, borde a toda la caja, hacemos que nos se modifique por el usuario
+y le damos un alto predeterminado.*/
+textarea{
+	width: 100%;
+	margin-bottom: 20px;
+	border:solid 1px #000078;
+	height: 150px;
+	resize: none;
+}
+/* Ancho completo y el margen para separar este input*/
+input[type="file"]{
+	margin-bottom: 20px;
+	width: 100%;
+}
+/* Cambiamos color y damos margenes superior e inferor.*/
+hr{color: #F0F0F0;margin: 20px 0px;}
+
+/* Añadimos la forma de botón al submit. 
+Utilizamos las propiedads anteriores y 
+quitamos estilos que viene predeterminados con el input*/
+.publicar form input.boton{
+	border:0;
+	color:#000078;
+	width: 150px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+/*******************
+    Últimos envíos
+********************/
+/* Margen superior a la sección*/
+
+.tabla-envios{
+	margin-top: 30px;
+}
+
+/* Centramos la caja del h1, para que esté alineado con el borde de la tabla*/
+.ultimos-envios h1{
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+/* Añadimos el ancho de la tabla, combinamos los bordes de las celdas y alineamos texto al centro*/
+table{
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+/* Para que el icono se posicione en una sola linea*/
+th i.fas{
+	display: block;
+}
+
+/* Espacio interno a las celdas*/
+td,th{
+	padding: 20px 10px;
+}
+
+/*Bordes a las filas*/
+tr{
+	border: none;
+	border-top: #000078 solid 2px;
+	border-bottom: #000078 solid 2px;
+}
+
+/*Coloreado par e impar a las filas del cuerpo de la tabla*/
+tbody tr:nth-child(even) { background: #F0F0F0 }
+tbody tr:nth-child(odd) { background: #D0D0D0}
+/*******************
+     Pie de página
+********************/
+
+/* Definimos fondo, separación con respecto a la sección principal y el espacio interno inferior*/
+footer{
+	background:#cfd8dc;
+	margin-top: 40px;
+	padding-bottom: 30px;
+	border-top: solid 2px #73EDFF;
+	color: #000078;
+	text-align: center;
+}
+
+/*Damos color, tamaño de la fuente y espacio y márgenes al párrafo del pié de página. */
+footer p{
+	padding: 5px 0px;
+	margin:0;
+	font-size: 0.85rem;
+}
+
+
+
+
+
+
+

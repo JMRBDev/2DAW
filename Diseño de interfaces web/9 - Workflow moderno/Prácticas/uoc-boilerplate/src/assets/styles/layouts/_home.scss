@@ -1,0 +1,327 @@
+@import '../_variables';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $primary-bg-color;
+    padding: 2rem 0;
+}
+
+body section:nth-child(odd) {
+    background-color: $secondary-bg-color;
+}
+
+.code {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    background-color: $white-color-dark;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.btn {
+    font-weight: 700;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.3rem;
+    background-color: $black-color-dark;
+    color: $black-color-light;
+    cursor: pointer;
+}
+
+.main--navmenu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5rem 2rem 5rem;
+}
+
+.navmenu--logo img {
+    width: 4rem;
+}
+
+.navmenu--menu-list {
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    color: white;
+}
+
+.menu-list--item {
+    display: flex;
+    align-items: center;
+    border-radius: 0.3rem;
+    color: black;
+    box-shadow: 0px 5px 7px -5px rgba(0,0,0,0.75);
+    
+    :hover {
+        transform: translateY(-0.2rem);
+    }
+    
+    :active {
+        transform: translateY(0.2rem);
+        box-shadow: inset 0px -15px 54px -22px rgba(0,0,0,0.5);
+        
+    }
+}
+
+.menu-list--item a {
+    padding: 0.5rem;
+    height: 30%;
+    color: unset;
+    text-decoration: none;
+}
+
+// Uso de funciones
+@function miFuncion($num1, $num2) {
+    @return $num1 + $num2;
+}
+
+// Cambiar el color de fondo de cada item del menú de navegación
+@each $color in $nav-items-bg-colors {
+    $i: index($nav-items-bg-colors, $color);
+    .menu-list--item__#{$i - 1} {
+        background-color: $color;
+    }
+}
+
+// Cambiar el color del texto de cada item del menú de navegación
+@each $color in $nav-items-text-colors {
+    $i: index($nav-items-text-colors, $color);
+    .menu-list--item__#{$i - 1} {
+        color: $color;
+    }
+}
+
+.main--section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0 5rem 0;
+
+    h2 {
+        padding: 2rem 0;
+    }
+
+    .section--cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 5rem;
+    
+    .section--card {
+            margin: 1rem;
+            width: 40%;
+
+            img {
+                min-width: 100%;
+            }
+        }
+    }
+}
+
+.section--card {
+    border-radius: 0.3rem;
+    box-shadow: 0 10px 15px -10px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    width: 30%;
+    background-color: $primary-bg-color;
+
+    .card--text {
+        margin-top: 0.5rem;
+        padding: 0 1rem 1rem 1rem;
+        min-height: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+        .card--heading {
+            font-weight: miFuncion(500, 200);
+            font-size: 1.5rem;
+        }
+
+        .card--description {
+            margin: 0.4rem 0;
+        }
+
+        .card--grey {
+            color: $black-color-light;
+            margin: 0.4rem 0;
+        }
+    }
+}
+
+.section--about {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 10rem;
+
+    div {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about--avatar {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about--description {
+        align-items: flex-start;
+    }
+}
+
+.contact--form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1rem 4rem;
+    grid-template-areas:
+      "form--input__name form--input__message"
+      "form--input__last-name form--input__message"
+      "form--input__email form--input__message"
+      "form--input__company form--input__message";
+}
+
+.form--input__name {
+    grid-area: form--input__name;
+}
+
+.form--input__last-name {
+    grid-area: form--input__last-name;
+}
+
+.form--input__email {
+    grid-area: form--input__email;
+}
+
+.form--input__company {
+    grid-area: form--input__company;
+}
+
+.form--input__message {
+    grid-area: form--input__message;
+}
+
+.form--group {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+}
+
+.form--input, .form--message {
+    border: 1px solid $black-color-light;
+    padding: 0.5rem 0.3rem;
+    border-radius: 0.3rem;
+    background-color: $primary-bg-color;
+}
+
+.form--message {
+    height: 100%;
+}
+
+.form--input:focus, .form--message:focus {
+    border: 1px solid $blue-text-color;
+    outline: none;
+}
+
+.contact--submit {
+    padding-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+.main--footer {
+    padding: 2rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.footer--social-nav {
+    position: absolute;
+    right: 2rem;
+    list-style-type: none;
+    display: flex;
+
+    .social-nav--item {
+        a {
+            color: $black-color-light;
+            
+            :hover {
+                color: $blue-bg-color;
+                transform: translateY(-0.1rem);
+                transition: transform 300ms ease, color 300ms ease;
+            }
+        }
+
+        &:not(:first-child) {
+            margin-left: 1rem;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    body {
+        padding: 0;
+    }
+    
+    .main--navmenu {
+        padding: 2rem 1rem 0 1rem;
+
+        .navmenu--logo {
+            display: none;
+        }
+    }
+
+    .main--section {
+        padding: 1rem;
+
+        .section--card {
+            margin: 0;
+            min-width: 100%;
+        }
+    }
+
+    .section--about {
+        padding: 1rem 2rem;
+        flex-direction: column;
+    }
+
+    .contact--form {
+        display: flex;
+        flex-direction: column;
+
+        .form--group {
+            width: 70vw;
+        }
+    }
+
+    .main--footer {
+        padding-bottom: 2rem;
+        flex-direction: column;
+
+        .footer--social-nav {
+            position: relative;
+            right: 0;
+            margin-bottom: 0.5rem;
+        }
+    }
+}

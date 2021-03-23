@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Jose Rosendo</title>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html"><img src="./img/logo-edix-home.svg" alt="Logotipo de Edix"></a>
+        <nav id="main-navigation" class="nav-menu">
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./adobe-xd.html#blog">Blog</a></li>
+                <li><a href="#" class="active">Contacto</a></li><!-- La clase active es para CSS -->
+            </ul>
+        </nav>
+        <nav id="rrss-navigation" class="nav-menu">
+            <ul>
+                <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                <li><a href="https://www.twitter.com/" target="_blank">Twitter</a></li>
+                <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Nos ponemos en contacto contigo sin compromiso</h1>
+        <form action="post">
+            <!-- He decidido hacer el action del formulatio POST, porque GET muestra todo el contenido del formulario en la URL y no me parece tan apropiado -->
+            <fieldset>
+                <!-- Cada subgrupo del formulario está seccionado en un fieldset para mayor legibilidad y comprensión -->
+                <legend>Remitente</legend>
+
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" minlength="2" maxlength="128" required
+                    pattern="^[a-zA-Z\s]+$"><!-- Solo letras mayúsculas y minúsculas, y números -->
+
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellidos" id="apellidos" minlength="2" maxlength="128" required
+                    pattern="^[a-zA-Z\s]+$">
+            </fieldset>
+
+            <fieldset>
+                <legend>Datos de contacto del remitente</legend>
+
+                <label for="tipo-documento">Tipo de documento</label>
+                <div class="radio-group">
+                    <!-- He metido todos los radio buttons dentro de un div para que sea más fácil agruparlos y gestionarlos con CSS -->
+                    <input type="radio" id="nif" name="tipo-documento" value="nif">
+                    <label for="nif">NIF (ejemplo: 43222312K)</label>
+
+                    <input type="radio" id="nie" name="tipo-documento" value="nie">
+                    <label for="nie">NIE (ejemplo: X0523821F)</label>
+
+                    <input type="radio" id="passport" name="tipo-documento" value="passport">
+                    <label for="passport">Mail (ejemplo: ZAB000221)</label>
+                </div>
+
+                <label for="num-documento">Número de documento</label>
+                <input type="text" name="num-documento" id="num-documento" minlength="9" maxlength="9" required
+                    pattern="^[a-zA-Z\d]+$">
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required><!-- El tipo email es para la validación dle campo -->
+
+                <label for="phone">Teléfono</label>
+                <input type="tel" name="phone" id="phone">
+            </fieldset>
+            <fieldset>
+                <legend>Datos adicionales</legend>
+
+                <input type="checkbox" name="politica-privacidad" id="politica-privacidad" required>
+                <label for="politica-privacidad">He leído y acepto la política de privacidad y el aviso legal.</label>
+
+                <input type="submit" value="Enviar">
+            </fieldset>
+        </form>
+    </main>
+    <footer class="main-footer">
+        <p>Prueba práctica realizada por Jose Rosendo Bienvenido</p>
+        <p>Módulo DIW. Resultado de Aprendizaje 1 - CE f</p>
+        <p>Curso 2020-2021</p>
+    </footer>
+</body>
+
+</html>

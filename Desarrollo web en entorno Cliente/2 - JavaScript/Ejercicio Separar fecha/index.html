@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Separar fechas - Jose Rosendo</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1>Separar fecha</h1>
+    <form onsubmit="return false" id="formulario">
+        <label for="fecha">Fecha: </label>
+        <input type="text" name="fecha" id="fecha" placeholder="dd/mm/aaaa" required><br>
+        <button onclick="separarFecha()">Enviar</button>
+    </form>
+    <h3 id="resultado"></h3>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
